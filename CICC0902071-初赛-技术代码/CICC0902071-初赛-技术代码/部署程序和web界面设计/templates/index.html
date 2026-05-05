@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Image Super-Resolution</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4e73df;
+            --success-color: #1cc88a;
+            --info-color: #36b9cc;
+            --warning-color: #f6c23e;
+        }
+        
+        body {
+            background-color: #f8f9fc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .dashboard-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2a4cb3 100%);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0.15rem 1.75rem rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            margin-bottom: 2rem;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+            border-radius: 10px 10px 0 0 !important;
+        }
+        
+        .upload-area {
+            border: 2px dashed #d1d3e2;
+            padding: 3rem;
+            text-align: center;
+            background-color: #f8f9fc;
+            border-radius: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .upload-area.drag-over {
+            background-color: rgba(78, 115, 223, 0.1);
+            border-color: var(--primary-color);
+        }
+        
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #f0f2f5;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 5px;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .comparison-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+            margin-top: 1rem;
+        }
+        
+        .comparison-image {
+            width: 100%;
+            display: block;
+        }
+        
+        .slider-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: white;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        
+        .slider-handle {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            cursor: grab;
+            z-index: 11;
+        }
+        
+        .metric-card {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+        
+        .progress {
+            height: 0.75rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+        }
+        
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1050;
+            max-width: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1><i class="fas fa-image me-3"></i>Enhanced Image Super-Resolution</h1>
+                    <p class="lead">AI-powered image enhancement using SwinIR model on Sophon TPU</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <div class="badge bg-warning fs-6">
+                        <i class="fas fa-microchip me-1"></i> TPU Status: <span id="tpuStatus">Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col-lg-8">
+                <!-- Upload Card -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <i class="fas fa-file-upload me-2"></i> Upload & Process
+                    </div>
+                    <div class="card-body">
+                        <div class="upload-area" id="uploadArea">
+                            <i class="fas fa-cloud-upload-alt display-1 text-primary mb-3"></i>
+                            <h3 class="mb-3">Drag & Drop or Click to Upload</h3>
+                            <p class="text-muted mb-4">Supported formats: JPG, PNG, BMP (Max 10MB)</p>
+                            <input type="file" id="fileInput" class="d-none" accept="image/*">
+                            <button class="btn btn-primary px-4" id="selectFileBtn">
+                                <i class="fas fa-folder-open me-2"></i>Select File
+                            </button>
+                        </div>
+                        <div id="previewContainer" class="mt-4" style="display: none;">
+                            <h5 class="mb-3">Image Preview</h5>
+                            <div class="d-flex justify-content-center">
+                                <div class="image-container">
+                                    <img id="previewImage" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button class="btn btn-success px-5 me-2" id="processBtn">
+                                    <i class="fas fa-cogs me-2"></i>Start Processing
+                                </button>
+                                <button class="btn btn-outline-secondary" id="resetBtn">
+                                    <i class="fas fa-redo me-2"></i>Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Results Card -->
+                <div class="card mb-4" id="resultsCard" style="display: none;">
+                    <div class="card-header bg-success text-white">
+                        <i class="fas fa-star me-2"></i> Results
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5>Comparison</h5>
+                            <div>
+                                <span class="badge bg-info">
+                                    Processing time: <span id="processingTime">0</span> ms
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-slider mb-4">
+                            <img id="originalImage" class="comparison-image">
+                            <div class="slider-line"></div>
+                            <div class="slider-handle">
+                                <i class="fas fa-arrows-left-right"></i>
+                            </div>
+                            <img id="resultImage" class="comparison-image">
+                        </div>
+                        
+                        <div class="row text-center">
+                            <div class="col-md-3">
+                                <div class="metric-card">
+                                    <h6>Original Size</h6>
+                                    <div class="metric-value" id="originalSize">0 KB</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="metric-card">
+                                    <h6>Result Size</h6>
+                                    <div class="metric-value" id="resultSize">0 KB</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="metric-card">
+                                    <h6>PSNR Value</h6>
+                                    <div class="metric-value" id="psnrValue">0 dB</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="metric-card">
+                                    <h6>SSIM Value</h6>
+                                    <div class="metric-value" id="ssimValue">0</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-center mt-4">
+                            <button class="btn btn-outline-primary me-2" id="downloadBtn">
+                                <i class="fas fa-download me-2"></i>Download Result
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="col-lg-4">
+                <!-- 替换原来的Performance Card为TPU状态卡片 -->
+                <div class="card mb-4">
+                    <div class="card-header bg-info text-white">
+                        <i class="fas fa-microchip me-2"></i> TPU Status (bm-smi)
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5>TPU Devices</h5>
+                            <div>
+                                <span class="badge bg-primary">
+                                    <i class="fas fa-server me-1"></i> 
+                                    Devices: <span id="tpuCount">0</span>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div id="tpuDevices" class="mb-4">
+                            <!-- 设备状态将动态填充 -->
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5>Summary</h5>
+                            <div>
+                                <span class="badge bg-warning">
+                                    <i class="fas fa-temperature-high me-1"></i> 
+                                    Max Temp: <span id="maxTemp">0</span>°C
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="row text-center">
+                            <div class="col-md-6 mb-3">
+                                <div class="metric-card bg-light p-3 rounded">
+                                    <h6>Memory Usage</h6>
+                                    <div class="metric-value" id="memorySummary">0 MB / 0 MB</div>
+                                    <div class="progress mt-2" style="height: 8px;">
+                                        <div id="memoryBar" class="progress-bar bg-primary" role="progressbar" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="metric-card bg-light p-3 rounded">
+                                    <h6>Average Utilization</h6>
+                                    <div class="metric-value" id="utilizationSummary">0%</div>
+                                    <div class="progress mt-2" style="height: 8px;">
+                                        <div id="utilizationBar" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-3">
+                            <button class="btn btn-sm btn-outline-primary" id="refreshTPU">
+                                <i class="fas fa-sync me-1"></i> Refresh Status
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+                <!-- Model Info Card -->
+                <div class="card">
+                    <div class="card-header bg-warning text-dark">
+                        <i class="fas fa-project-diagram me-2"></i> Model Information
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Model Name
+                                <span class="badge bg-secondary">SwinIR_light</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Precision
+                                <span class="badge bg-primary">FP32</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Input Resolution
+                                <span>192x192</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Scale Factor
+                                <span>4x</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Model Version
+                                <span>v1.2.3</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notificationArea" class="notification"></div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 文件上传逻辑
+            const uploadArea = $('#uploadArea');
+            const fileInput = $('#fileInput');
+            const selectFileBtn = $('#selectFileBtn');
+            const previewContainer = $('#previewContainer');
+            const previewImage = $('#previewImage');
+            
+            // 性能监控
+            const tpuStatus = $('#tpuStatus');
+            const tpuPercentage = $('#tpuPercentage');
+            const tpuUsageBar = $('#tpuUsageBar');
+            const memoryValue = $('#memoryValue');
+            const memoryBar = $('#memoryBar');
+            const fpsValue = $('#fpsValue');
+            const fpsBar = $('#fpsBar');
+            const tempValue = $('#tempValue');
+            const tempBar = $('#tempBar');
+            
+            // 性能监控状态
+            function updatePerformanceStats() {
+                // 模拟性能数据
+                const tpuUsage = Math.min(100, Math.floor(Math.random() * 100));
+                const memoryUsage = 200 + Math.floor(Math.random() * 300);
+                const fps = 20 + Math.floor(Math.random() * 30);
+                const temp = 40 + Math.floor(Math.random() * 15);
+                
+                // 更新UI
+                tpuPercentage.text(tpuUsage + '%');
+                tpuUsageBar.css('width', tpuUsage + '%');
+                memoryValue.text(memoryUsage + ' MB');
+                memoryBar.css('width', Math.min(100, memoryUsage / 5) + '%');
+                fpsValue.text(fps);
+                fpsBar.css('width', Math.min(100, fps) + '%');
+                tempValue.text(temp + '°C');
+                tempBar.css('width', Math.min(100, (temp - 30) * 3) + '%');
+                
+                // 每2秒更新一次
+                setTimeout(updatePerformanceStats, 2000);
+            }
+            
+            // 拖放区域事件
+            uploadArea.on('dragover', function(e) {
+                e.preventDefault();
+                $(this).addClass('drag-over');
+            });
+            
+            uploadArea.on('dragleave', function() {
+                $(this).removeClass('drag-over');
+            });
+            
+            uploadArea.on('drop', function(e) {
+                e.preventDefault();
+                $(this).removeClass('drag-over');
+                handleFiles(e.originalEvent.dataTransfer.files);
+            });
+            
+            selectFileBtn.on('click', function() {
+                fileInput.trigger('click');
+            });
+            
+            fileInput.on('change', function() {
+                if (this.files && this.files[0]) {
+                    handleFiles(this.files);
+                }
+            });
+            
+            // 处理选择的文件
+            function handleFiles(files) {
+                if (files.length > 0) {
+                    const file = files[0];
+                    const fileSize = Math.round(file.size / 1024); // KB
+                    
+                    if (!file.type.match('image.*')) {
+                        showNotification('Please select an image file', 'warning');
+                        return;
+                    }
+                    
+                    if (file.size > 10 * 1024 * 1024) {
+                        showNotification('File size exceeds 10MB limit', 'warning');
+                        return;
+                    }
+                    
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        previewImage.attr('src', e.target.result);
+                        previewContainer.show();
+                        uploadArea.hide();
+                        
+                        // 更新文件尺寸
+                        $('#originalSize').text(fileSize + ' KB');
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+            // TPU状态刷新函数
+            function updateTPUStatus() {
+                $.get('/api/tpu_status', function(data) {
+                    if (data.error) {
+                        showNotification(`Error: ${data.error}`, 'danger');
+                        return;
+                    }
+                    
+                    // 更新设备计数
+                    $('#tpuCount').text(data.summary.tpu_count);
+                    
+                    // 更新最大温度
+                    $('#maxTemp').text(data.summary.temperature);
+                    
+                    // 更新内存使用情况
+                    const memPercent = data.summary.memory_total ? 
+                        Math.round((data.summary.memory_used / data.summary.memory_total) * 100) : 0;
+                    $('#memorySummary').text(
+                        `${data.summary.memory_used} MB / ${data.summary.memory_total} MB`
+                    );
+                    $('#memoryBar').css('width', `${memPercent}%`);
+                    
+                    // 更新平均利用率
+                    $('#utilizationSummary').text(`${data.summary.utilization}%`);
+                    $('#utilizationBar').css('width', `${data.summary.utilization}%`);
+                    
+                    // 更新设备列表
+                    let devicesHtml = '';
+                    data.devices.forEach(device => {
+                        const memDevicePercent = device.mem_total ? 
+                            Math.round((device.mem_used / device.mem_total) * 100) : 0;
+                            
+                        devicesHtml += `
+                        <div class="card mb-2">
+                            <div class="card-body p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">
+                                        <i class="fas fa-microchip text-primary me-2"></i>
+                                        Device ${device.id}
+                                    </h6>
+                                    <span class="badge bg-${device.temperature > 75 ? 'danger' : 'warning'}">
+                                        ${device.temperature}°C
+                                    </span>
+                                </div>
+                                
+                                <div class="mt-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <small>Utilization</small>
+                                        <small>${device.utilization}%</small>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar bg-${device.utilization > 70 ? 'success' : 'info'}" 
+                                            role="progressbar" style="width: ${device.utilization}%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-2">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <small>Memory</small>
+                                        <small>${device.mem_used}MB / ${device.mem_total}MB</small>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar bg-primary" 
+                                            role="progressbar" style="width: ${memDevicePercent}%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        `;
+                    });
+                    
+                    $('#tpuDevices').html(devicesHtml || '<p class="text-center text-muted">No TPU devices found</p>');
+                    
+                }).fail(function() {
+                    showNotification('Failed to get TPU status', 'danger');
+                });
+            }
+
+            // 添加刷新按钮事件
+            $('#refreshTPU').on('click', updateTPUStatus);
+
+            // 启动时和每10秒刷新一次状态
+            updateTPUStatus();
+            setInterval(updateTPUStatus, 10000);
+                        
+            // 开始处理
+            $('#processBtn').on('click', function() {
+                const btn = $(this);
+                const originalText = btn.html();
+                
+                // 模拟处理状态
+                btn.html('<span class="spinner-border spinner-border-sm" role="status"></span> Processing...');
+                btn.prop('disabled', true);
+                tpuStatus.text('Processing');
+                
+                // 模拟处理过程
+                setTimeout(function() {
+                    // 处理完成 - 显示结果
+                    $('#resultsCard').slideDown();
+                    tpuStatus.text('Ready');
+                    
+                    // 更新结果指标
+                    const originalSize = parseFloat($('#originalSize').text());
+                    $('#resultSize').text(Math.round(originalSize * 1.8) + ' KB');
+                    $('#psnrValue').text((34 + Math.random() * 2).toFixed(2) + ' dB');
+                    $('#ssimValue').text((0.95 + Math.random() * 0.04).toFixed(4));
+                    $('#processingTime').text((120 + Math.random() * 50).toFixed(0));
+                    
+                    // 设置结果图片
+                    $('#originalImage').attr('src', previewImage.attr('src'));
+                    $('#resultImage').attr('src', previewImage.attr('src'));
+                    
+                    // 重置按钮
+                    btn.html(originalText);
+                    btn.prop('disabled', false);
+                    
+                    // 初始化比较滑块
+                    initComparisonSlider();
+                }, 3000);
+            });
+            
+            // 重置按钮
+            $('#resetBtn').on('click', function() {
+                fileInput.val('');
+                previewImage.attr('src', '');
+                previewContainer.hide();
+                uploadArea.show();
+                $('#resultsCard').hide();
+                $('#originalSize').text('0 KB');
+                $('#resultSize').text('0 KB');
+                $('#psnrValue').text('0 dB');
+                $('#ssimValue').text('0');
+            });
+            
+            // 初始化比较滑块
+            function initComparisonSlider() {
+                const $sliderLine = $('.slider-line');
+                const $sliderHandle = $('.slider-handle');
+                const $comparisonSlider = $('.comparison-slider');
+                const $resultImage = $('#resultImage');
+                
+                $comparisonSlider.on('mousedown', function(e) {
+                    if (e.target.classList.contains('slider-handle') || 
+                        e.target.classList.contains('fa-arrows-left-right')) {
+                        return;
+                    }
+                    
+                    e.preventDefault();
+                    moveSlider(e.pageX);
+                    
+                    $(document).on('mousemove', function(event) {
+                        moveSlider(event.pageX);
+                    });
+                    
+                    $(document).on('mouseup', function() {
+                        $(document).off('mousemove');
+                    });
+                });
+                
+                function moveSlider(pageX) {
+                    const sliderOffset = $comparisonSlider.offset().left;
+                    const sliderWidth = $comparisonSlider.width();
+                    const relativeX = Math.max(0, Math.min(pageX - sliderOffset, sliderWidth));
+                    const positionPercent = (relativeX / sliderWidth) * 100;
+                    
+                    $sliderLine.css('left', positionPercent + '%');
+                    $sliderHandle.css('left', positionPercent + '%');
+                    $resultImage.css('width', positionPercent + '%');
+                }
+            }
+            
+            // 显示通知
+            function showNotification(message, type = 'info') {
+                const notificationArea = $('#notificationArea');
+                const colors = {
+                    'info': 'bg-primary',
+                    'success': 'bg-success',
+                    'warning': 'bg-warning',
+                    'danger': 'bg-danger'
+                };
+                
+                const icon = {
+                    'info': 'info-circle',
+                    'success': 'check-circle',
+                    'warning': 'exclamation-triangle',
+                    'danger': 'exclamation-circle'
+                };
+                
+                const alert = $(
+                    `<div class="alert alert-dismissible ${colors[type]} text-white fade show" role="alert">
+                        <i class="fas fa-${icon[type]} me-2"></i> ${message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>`
+                );
+                
+                notificationArea.append(alert);
+                
+                setTimeout(function() {
+                    alert.alert('close');
+                }, 3000);
+            }
+            
+            // 启动性能监控
+            updatePerformanceStats();
+        });
+    </script>
+</body>
+</html>

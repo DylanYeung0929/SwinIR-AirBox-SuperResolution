@@ -1,0 +1,1530 @@
+.
+├── CICC0902071-初赛-技术代码
+│   ├── model_yolov5s
+│   │   ├── COCO2017
+│   │   │   ├── 000000000632.jpg
+│   │   │   ├── 000000000885.jpg
+│   │   │   ├── 000000001532.jpg
+│   │   │   ├── 000000004495.jpg
+│   │   │   ├── 000000006954.jpg
+│   │   │   ├── 000000009400.jpg
+│   │   │   ├── 000000010092.jpg
+│   │   │   ├── 000000025096.jpg
+│   │   │   ├── 000000034139.jpg
+│   │   │   ├── 000000040757.jpg
+│   │   │   ├── 000000042296.jpg
+│   │   │   ├── 000000045229.jpg
+│   │   │   ├── 000000051598.jpg
+│   │   │   ├── 000000079188.jpg
+│   │   │   ├── 000000080659.jpg
+│   │   │   ├── 000000082821.jpg
+│   │   │   ├── 000000085329.jpg
+│   │   │   ├── 000000085911.jpg
+│   │   │   ├── 000000088345.jpg
+│   │   │   ├── 000000088970.jpg
+│   │   │   ├── 000000093261.jpg
+│   │   │   ├── 000000094157.jpg
+│   │   │   ├── 000000094185.jpg
+│   │   │   ├── 000000095069.jpg
+│   │   │   ├── 000000099039.jpg
+│   │   │   ├── 000000104198.jpg
+│   │   │   ├── 000000104619.jpg
+│   │   │   ├── 000000104669.jpg
+│   │   │   ├── 000000106881.jpg
+│   │   │   ├── 000000109827.jpg
+│   │   │   ├── 000000111609.jpg
+│   │   │   ├── 000000116825.jpg
+│   │   │   ├── 000000119088.jpg
+│   │   │   ├── 000000119445.jpg
+│   │   │   ├── 000000122672.jpg
+│   │   │   ├── 000000123633.jpg
+│   │   │   ├── 000000124798.jpg
+│   │   │   ├── 000000127660.jpg
+│   │   │   ├── 000000128148.jpg
+│   │   │   ├── 000000128372.jpg
+│   │   │   ├── 000000134096.jpg
+│   │   │   ├── 000000160728.jpg
+│   │   │   ├── 000000162130.jpg
+│   │   │   ├── 000000162858.jpg
+│   │   │   ├── 000000174371.jpg
+│   │   │   ├── 000000177065.jpg
+│   │   │   ├── 000000185250.jpg
+│   │   │   ├── 000000191288.jpg
+│   │   │   ├── 000000194471.jpg
+│   │   │   ├── 000000200839.jpg
+│   │   │   ├── 000000206838.jpg
+│   │   │   ├── 000000208363.jpg
+│   │   │   ├── 000000209753.jpg
+│   │   │   ├── 000000210915.jpg
+│   │   │   ├── 000000213255.jpg
+│   │   │   ├── 000000213605.jpg
+│   │   │   ├── 000000220310.jpg
+│   │   │   ├── 000000228436.jpg
+│   │   │   ├── 000000230008.jpg
+│   │   │   ├── 000000232348.jpg
+│   │   │   ├── 000000239041.jpg
+│   │   │   ├── 000000239537.jpg
+│   │   │   ├── 000000239857.jpg
+│   │   │   ├── 000000255749.jpg
+│   │   │   ├── 000000255917.jpg
+│   │   │   ├── 000000281447.jpg
+│   │   │   ├── 000000293300.jpg
+│   │   │   ├── 000000294163.jpg
+│   │   │   ├── 000000296657.jpg
+│   │   │   ├── 000000304545.jpg
+│   │   │   ├── 000000304560.jpg
+│   │   │   ├── 000000307598.jpg
+│   │   │   ├── 000000308753.jpg
+│   │   │   ├── 000000309655.jpg
+│   │   │   ├── 000000352684.jpg
+│   │   │   ├── 000000354307.jpg
+│   │   │   ├── 000000356531.jpg
+│   │   │   ├── 000000361586.jpg
+│   │   │   ├── 000000366711.jpg
+│   │   │   ├── 000000373315.jpg
+│   │   │   ├── 000000441442.jpg
+│   │   │   ├── 000000442009.jpg
+│   │   │   ├── 000000442661.jpg
+│   │   │   ├── 000000447169.jpg
+│   │   │   ├── 000000447187.jpg
+│   │   │   ├── 000000463618.jpg
+│   │   │   ├── 000000466602.jpg
+│   │   │   ├── 000000475779.jpg
+│   │   │   ├── 000000476704.jpg
+│   │   │   ├── 000000481413.jpg
+│   │   │   ├── 000000497568.jpg
+│   │   │   ├── 000000497599.jpg
+│   │   │   ├── 000000498747.jpg
+│   │   │   ├── 000000532761.jpg
+│   │   │   ├── 000000547502.jpg
+│   │   │   ├── 000000549167.jpg
+│   │   │   ├── 000000550939.jpg
+│   │   │   ├── 000000562443.jpg
+│   │   │   ├── 000000579091.jpg
+│   │   │   └── 000000580418.jpg
+│   │   ├── image
+│   │   │   ├── 0.png
+│   │   │   ├── 1.png
+│   │   │   ├── 2.png
+│   │   │   ├── 5.jpg
+│   │   │   ├── Aaron_Eckhart_0001.jpg
+│   │   │   ├── camvid.png
+│   │   │   ├── cat.jpg
+│   │   │   ├── city.png
+│   │   │   ├── dog.jpg
+│   │   │   ├── image_list.txt
+│   │   │   ├── parade.jpg
+│   │   │   ├── pose_256_192.jpg
+│   │   │   ├── rain192192_swinir.png
+│   │   │   └── stock_market.jpg
+│   │   ├── tpu-mlir-resource
+│   │   │   ├── cali_tables
+│   │   │   │   ├── alphapose_res50_cali_table
+│   │   │   │   ├── arcface_res50_cali_table
+│   │   │   │   ├── bert_base_pt_cali_table
+│   │   │   │   ├── bert_base_pt_qtable
+│   │   │   │   ├── bert_base_pt_v2_cali_table
+│   │   │   │   ├── bert_base_pt_v2_qtable
+│   │   │   │   ├── bert_large_pt_cali_table
+│   │   │   │   ├── bert_large_pt_qtable
+│   │   │   │   ├── bert-tiny_from_pt_cali_table
+│   │   │   │   ├── bert-tiny_from_pt_qtable
+│   │   │   │   ├── blazeface_cali_table
+│   │   │   │   ├── cswin_block_cali_table
+│   │   │   │   ├── densenet121-12_cali_table
+│   │   │   │   ├── densenet121-12_qtable
+│   │   │   │   ├── densenet201_cali_table
+│   │   │   │   ├── DenseNet-Caffe_cali_table
+│   │   │   │   ├── ecanet50_cali_table
+│   │   │   │   ├── efficientdet-d0_cali_table
+│   │   │   │   ├── efficientnet_cali_table
+│   │   │   │   ├── efficientnetv2_cali_table
+│   │   │   │   ├── enet_cf_cali_table
+│   │   │   │   ├── erfnet_cf_cali_table
+│   │   │   │   ├── espcn_3x_cali_table
+│   │   │   │   ├── eva02_block_cali_table
+│   │   │   │   ├── feature_extract_cf_cali_table
+│   │   │   │   ├── googlenet_cf_cali_table
+│   │   │   │   ├── hrnet_pt_cali_table
+│   │   │   │   ├── icnet_cf_cali_table
+│   │   │   │   ├── inception_v3_cali_table
+│   │   │   │   ├── inception_v3_cf_cali_table
+│   │   │   │   ├── inception_v4_cf_cali_table
+│   │   │   │   ├── LeNet_cf_cali_table
+│   │   │   │   ├── mnist-12_cali_table
+│   │   │   │   ├── mobilenet_v2_cali_table
+│   │   │   │   ├── mobilenet_v2_cf_cali_table
+│   │   │   │   ├── mobilenet_v2_cf_cali_table_bak
+│   │   │   │   ├── mobilenet_v2_cvi_cali_table
+│   │   │   │   ├── mobilenetv2_ssd_cf_cali_table
+│   │   │   │   ├── nasnet_mobile_cali_table
+│   │   │   │   ├── pp_hgnet_cali_table
+│   │   │   │   ├── pp_humanseg_cali_table
+│   │   │   │   ├── pp_humanseg_qtable
+│   │   │   │   ├── pp_liteseg_cali_table
+│   │   │   │   ├── pp_ocr_cls_cali_table
+│   │   │   │   ├── pp_ocr_det_cali_table
+│   │   │   │   ├── pp_ocr_rec_cali_table
+│   │   │   │   ├── pp_picodet_cali_table
+│   │   │   │   ├── pp_yoloe_cali_table
+│   │   │   │   ├── pp_yoloe_m_cali_table
+│   │   │   │   ├── pp_yolov3_cali_table
+│   │   │   │   ├── pp_yolov3_qtable
+│   │   │   │   ├── pp_yolox_cali_table
+│   │   │   │   ├── res2net50_cali_table
+│   │   │   │   ├── resnet18_cf_cali_table
+│   │   │   │   ├── resnet18_v1_cali_table
+│   │   │   │   ├── resnet18_v2_cali_table
+│   │   │   │   ├── resnet34_ssd1200_cali_table
+│   │   │   │   ├── resnet50_pt_cali_table
+│   │   │   │   ├── resnet50_v1_cali_table
+│   │   │   │   ├── resnet50_v2_cali_table
+│   │   │   │   ├── resnet50_v2_cali_table_f8e4m3
+│   │   │   │   ├── resnet50_v2_cali_table_f8e5m2
+│   │   │   │   ├── resnext50_cf_cali_table
+│   │   │   │   ├── resnext_pt_cali_table
+│   │   │   │   ├── retinaface_cali_table
+│   │   │   │   ├── retinaface_mnet_with_det_cali_table
+│   │   │   │   ├── roberta_base_pt_cali_table
+│   │   │   │   ├── roberta_base_pt_qtable
+│   │   │   │   ├── segnet_cf_cali_table
+│   │   │   │   ├── se-resnet50_cali_table
+│   │   │   │   ├── shufflenet_v2_cali_table
+│   │   │   │   ├── shufflenet_v2_pt_cali_table
+│   │   │   │   ├── squeezenet1.0_cali_table
+│   │   │   │   ├── squeezenet_cf_cali_table
+│   │   │   │   ├── squeezenet_v1.1_cf_cali_table
+│   │   │   │   ├── squeezenet_v1.1_cf_cvs20_cali_table
+│   │   │   │   ├── ssd-12_cali_table
+│   │   │   │   ├── ssd300_cf_cali_table
+│   │   │   │   ├── swint_block_cali_table
+│   │   │   │   ├── ultraface_640_cali_table
+│   │   │   │   ├── unet_cali_table
+│   │   │   │   ├── unet_plusplus_cali_table
+│   │   │   │   ├── vgg16_cali_table
+│   │   │   │   ├── xception_cali_table
+│   │   │   │   ├── xception_qtable
+│   │   │   │   ├── yolov3_416_with_det_cali_table
+│   │   │   │   ├── yolov3_cali_table
+│   │   │   │   ├── yolov3_spp_cf_cali_table
+│   │   │   │   ├── yolov3_tiny_cali_table
+│   │   │   │   ├── yolov4_cf_cali_table
+│   │   │   │   ├── yolov4s_cali_table
+│   │   │   │   ├── yolov5s_cali_table
+│   │   │   │   ├── yolov5s-face_cali_table
+│   │   │   │   ├── yolov5s_pt_cali_table
+│   │   │   │   ├── yolov5s_with_trans_cali_table
+│   │   │   │   ├── yolov7_cali_table
+│   │   │   │   ├── yolov8n_cali_table
+│   │   │   │   ├── yolov8s_cali_table
+│   │   │   │   ├── yolov8s_qtable
+│   │   │   │   ├── yolov8s_qtable_mars3
+│   │   │   │   └── yolox_s_cali_table
+│   │   │   ├── chip.py
+│   │   │   ├── config
+│   │   │   │   ├── alphapose_res50.ini
+│   │   │   │   ├── arcface_res50.ini
+│   │   │   │   ├── attention_2batch_block_0_1.ini
+│   │   │   │   ├── attention_block_0_1.ini
+│   │   │   │   ├── bert_base_pt.ini
+│   │   │   │   ├── bert_base_pt_v2.ini
+│   │   │   │   ├── bert_large_pt.ini
+│   │   │   │   ├── bert_pt.ini
+│   │   │   │   ├── bert-tiny_from_pt.ini
+│   │   │   │   ├── blazeface.ini
+│   │   │   │   ├── cswin_block.ini
+│   │   │   │   ├── densenet121-12.ini
+│   │   │   │   ├── densenet201.ini
+│   │   │   │   ├── DenseNet-Caffe.ini
+│   │   │   │   ├── downsample_block_0.ini
+│   │   │   │   ├── downsample_block_2batch_0.ini
+│   │   │   │   ├── ecanet50.ini
+│   │   │   │   ├── efficientdet-d0.ini
+│   │   │   │   ├── efficientnet.ini
+│   │   │   │   ├── efficientnetv2.ini
+│   │   │   │   ├── enet_cf.ini
+│   │   │   │   ├── erfnet_cf.ini
+│   │   │   │   ├── espcn_3x.ini
+│   │   │   │   ├── eva02_block.ini
+│   │   │   │   ├── feature_extract_cf.ini
+│   │   │   │   ├── googlenet_cf.ini
+│   │   │   │   ├── hrnet_pt.ini
+│   │   │   │   ├── icnet_cf.ini
+│   │   │   │   ├── inception_v3_cf.ini
+│   │   │   │   ├── inception_v3.ini
+│   │   │   │   ├── inception_v4_cf.ini
+│   │   │   │   ├── inception_v4_tf.ini
+│   │   │   │   ├── LeNet_cf.ini
+│   │   │   │   ├── mnist-12.ini
+│   │   │   │   ├── mobilebert_tf.ini
+│   │   │   │   ├── mobilenet_v2_cf_bs4.ini
+│   │   │   │   ├── mobilenet_v2_cf.ini
+│   │   │   │   ├── mobilenet_v2.ini
+│   │   │   │   ├── mobilenet_v2_int4_qat.ini
+│   │   │   │   ├── mobilenetv2_ssd_cf.ini
+│   │   │   │   ├── mobilenet_v2_tf.ini
+│   │   │   │   ├── nasnet_mobile.ini
+│   │   │   │   ├── nmt_decode10.ini
+│   │   │   │   ├── nmt_decode20.ini
+│   │   │   │   ├── nmt_encode.ini
+│   │   │   │   ├── pp_hgnet.ini
+│   │   │   │   ├── pp_humanseg.ini
+│   │   │   │   ├── pp_liteseg.ini
+│   │   │   │   ├── pp_ocr_cls.ini
+│   │   │   │   ├── pp_ocr_det.ini
+│   │   │   │   ├── pp_ocr_rec.ini
+│   │   │   │   ├── pp_picodet.ini
+│   │   │   │   ├── pp_yoloe.ini
+│   │   │   │   ├── pp_yoloe_m.ini
+│   │   │   │   ├── pp_yolov3.ini
+│   │   │   │   ├── pp_yolox.ini
+│   │   │   │   ├── res2net50.ini
+│   │   │   │   ├── resnet18_cf.ini
+│   │   │   │   ├── resnet18_int4_qat.ini
+│   │   │   │   ├── resnet18_qat.ini
+│   │   │   │   ├── resnet18_v1.ini
+│   │   │   │   ├── resnet18_v2.ini
+│   │   │   │   ├── resnet50_int4_qat.ini
+│   │   │   │   ├── resnet50_pt.ini
+│   │   │   │   ├── resnet50_tf.ini
+│   │   │   │   ├── resnet50_v1.ini
+│   │   │   │   ├── resnet50_v2.ini
+│   │   │   │   ├── resnext50_cf.ini
+│   │   │   │   ├── resnext_pt.ini
+│   │   │   │   ├── retinaface.ini
+│   │   │   │   ├── retinaface_mnet_with_det.ini
+│   │   │   │   ├── roberta_base_pt.ini
+│   │   │   │   ├── sam_block.ini
+│   │   │   │   ├── sample.ini
+│   │   │   │   ├── sd_decoder_pt.ini
+│   │   │   │   ├── sd_encoder_pt.ini
+│   │   │   │   ├── segnet_cf.ini
+│   │   │   │   ├── se-resnet50.ini
+│   │   │   │   ├── shufflenet_v2.ini
+│   │   │   │   ├── shufflenet_v2_int4_qat.ini
+│   │   │   │   ├── shufflenet_v2_pt.ini
+│   │   │   │   ├── squeezenet1.0.ini
+│   │   │   │   ├── squeezenet_cf.ini
+│   │   │   │   ├── squeezenet_v1.1_cf_cvs20.ini
+│   │   │   │   ├── squeezenet_v1.1_cf.ini
+│   │   │   │   ├── ssd-12.ini
+│   │   │   │   ├── ssd300_cf.ini
+│   │   │   │   ├── ssd_mobilenet_v1_tf.ini
+│   │   │   │   ├── swint_block.ini
+│   │   │   │   ├── swin_transformer.ini
+│   │   │   │   ├── ultraface_640.ini
+│   │   │   │   ├── unet.ini
+│   │   │   │   ├── unet_plusplus.ini
+│   │   │   │   ├── vgg16.ini
+│   │   │   │   ├── xception.ini
+│   │   │   │   ├── yolov3_416_with_det.ini
+│   │   │   │   ├── yolov3.ini
+│   │   │   │   ├── yolov3_spp_cf.ini
+│   │   │   │   ├── yolov3_tiny.ini
+│   │   │   │   ├── yolov4_cf.ini
+│   │   │   │   ├── yolov4s.ini
+│   │   │   │   ├── yolov5s-face.ini
+│   │   │   │   ├── yolov5s.ini
+│   │   │   │   ├── yolov5s_int4_qat.ini
+│   │   │   │   ├── yolov5s_pt.ini
+│   │   │   │   ├── yolov5s_qat.ini
+│   │   │   │   ├── yolov5s_tf.ini
+│   │   │   │   ├── yolov5s_with_trans.ini
+│   │   │   │   ├── yolov7.ini
+│   │   │   │   ├── yolov8n.ini
+│   │   │   │   ├── yolov8s.ini
+│   │   │   │   └── yolox_s.ini
+│   │   │   ├── dailyrelease_cvimodel.py
+│   │   │   ├── dataset
+│   │   │   │   ├── BertBase
+│   │   │   │   │   ├── bert-base_0.npz
+│   │   │   │   │   ├── bert-base_10.npz
+│   │   │   │   │   ├── bert-base_11.npz
+│   │   │   │   │   ├── bert-base_12.npz
+│   │   │   │   │   ├── bert-base_13.npz
+│   │   │   │   │   ├── bert-base_14.npz
+│   │   │   │   │   ├── bert-base_15.npz
+│   │   │   │   │   ├── bert-base_16.npz
+│   │   │   │   │   ├── bert-base_17.npz
+│   │   │   │   │   ├── bert-base_18.npz
+│   │   │   │   │   ├── bert-base_19.npz
+│   │   │   │   │   ├── bert-base_1.npz
+│   │   │   │   │   ├── bert-base_20.npz
+│   │   │   │   │   ├── bert-base_21.npz
+│   │   │   │   │   ├── bert-base_22.npz
+│   │   │   │   │   ├── bert-base_23.npz
+│   │   │   │   │   ├── bert-base_24.npz
+│   │   │   │   │   ├── bert-base_25.npz
+│   │   │   │   │   ├── bert-base_26.npz
+│   │   │   │   │   ├── bert-base_27.npz
+│   │   │   │   │   ├── bert-base_28.npz
+│   │   │   │   │   ├── bert-base_29.npz
+│   │   │   │   │   ├── bert-base_2.npz
+│   │   │   │   │   ├── bert-base_30.npz
+│   │   │   │   │   ├── bert-base_31.npz
+│   │   │   │   │   ├── bert-base_32.npz
+│   │   │   │   │   ├── bert-base_33.npz
+│   │   │   │   │   ├── bert-base_34.npz
+│   │   │   │   │   ├── bert-base_35.npz
+│   │   │   │   │   ├── bert-base_36.npz
+│   │   │   │   │   ├── bert-base_37.npz
+│   │   │   │   │   ├── bert-base_38.npz
+│   │   │   │   │   ├── bert-base_39.npz
+│   │   │   │   │   ├── bert-base_3.npz
+│   │   │   │   │   ├── bert-base_40.npz
+│   │   │   │   │   ├── bert-base_41.npz
+│   │   │   │   │   ├── bert-base_42.npz
+│   │   │   │   │   ├── bert-base_43.npz
+│   │   │   │   │   ├── bert-base_44.npz
+│   │   │   │   │   ├── bert-base_45.npz
+│   │   │   │   │   ├── bert-base_46.npz
+│   │   │   │   │   ├── bert-base_47.npz
+│   │   │   │   │   ├── bert-base_48.npz
+│   │   │   │   │   ├── bert-base_49.npz
+│   │   │   │   │   ├── bert-base_4.npz
+│   │   │   │   │   ├── bert-base_50.npz
+│   │   │   │   │   ├── bert-base_51.npz
+│   │   │   │   │   ├── bert-base_52.npz
+│   │   │   │   │   ├── bert-base_53.npz
+│   │   │   │   │   ├── bert-base_54.npz
+│   │   │   │   │   ├── bert-base_55.npz
+│   │   │   │   │   ├── bert-base_56.npz
+│   │   │   │   │   ├── bert-base_57.npz
+│   │   │   │   │   ├── bert-base_58.npz
+│   │   │   │   │   ├── bert-base_59.npz
+│   │   │   │   │   ├── bert-base_5.npz
+│   │   │   │   │   ├── bert-base_60.npz
+│   │   │   │   │   ├── bert-base_61.npz
+│   │   │   │   │   ├── bert-base_62.npz
+│   │   │   │   │   ├── bert-base_63.npz
+│   │   │   │   │   ├── bert-base_64.npz
+│   │   │   │   │   ├── bert-base_65.npz
+│   │   │   │   │   ├── bert-base_66.npz
+│   │   │   │   │   ├── bert-base_67.npz
+│   │   │   │   │   ├── bert-base_68.npz
+│   │   │   │   │   ├── bert-base_69.npz
+│   │   │   │   │   ├── bert-base_6.npz
+│   │   │   │   │   ├── bert-base_70.npz
+│   │   │   │   │   ├── bert-base_71.npz
+│   │   │   │   │   ├── bert-base_72.npz
+│   │   │   │   │   ├── bert-base_73.npz
+│   │   │   │   │   ├── bert-base_74.npz
+│   │   │   │   │   ├── bert-base_75.npz
+│   │   │   │   │   ├── bert-base_76.npz
+│   │   │   │   │   ├── bert-base_77.npz
+│   │   │   │   │   ├── bert-base_78.npz
+│   │   │   │   │   ├── bert-base_79.npz
+│   │   │   │   │   ├── bert-base_7.npz
+│   │   │   │   │   ├── bert-base_80.npz
+│   │   │   │   │   ├── bert-base_81.npz
+│   │   │   │   │   ├── bert-base_82.npz
+│   │   │   │   │   ├── bert-base_83.npz
+│   │   │   │   │   ├── bert-base_84.npz
+│   │   │   │   │   ├── bert-base_85.npz
+│   │   │   │   │   ├── bert-base_86.npz
+│   │   │   │   │   ├── bert-base_87.npz
+│   │   │   │   │   ├── bert-base_88.npz
+│   │   │   │   │   ├── bert-base_89.npz
+│   │   │   │   │   ├── bert-base_8.npz
+│   │   │   │   │   ├── bert-base_90.npz
+│   │   │   │   │   ├── bert-base_91.npz
+│   │   │   │   │   ├── bert-base_92.npz
+│   │   │   │   │   ├── bert-base_93.npz
+│   │   │   │   │   ├── bert-base_94.npz
+│   │   │   │   │   ├── bert-base_95.npz
+│   │   │   │   │   ├── bert-base_96.npz
+│   │   │   │   │   ├── bert-base_97.npz
+│   │   │   │   │   ├── bert-base_98.npz
+│   │   │   │   │   ├── bert-base_99.npz
+│   │   │   │   │   └── bert-base_9.npz
+│   │   │   │   ├── COCO2017
+│   │   │   │   │   ├── 000000000632.jpg
+│   │   │   │   │   ├── 000000000885.jpg
+│   │   │   │   │   ├── 000000001532.jpg
+│   │   │   │   │   ├── 000000004495.jpg
+│   │   │   │   │   ├── 000000006954.jpg
+│   │   │   │   │   ├── 000000009400.jpg
+│   │   │   │   │   ├── 000000010092.jpg
+│   │   │   │   │   ├── 000000025096.jpg
+│   │   │   │   │   ├── 000000034139.jpg
+│   │   │   │   │   ├── 000000040757.jpg
+│   │   │   │   │   ├── 000000042296.jpg
+│   │   │   │   │   ├── 000000045229.jpg
+│   │   │   │   │   ├── 000000051598.jpg
+│   │   │   │   │   ├── 000000079188.jpg
+│   │   │   │   │   ├── 000000080659.jpg
+│   │   │   │   │   ├── 000000082821.jpg
+│   │   │   │   │   ├── 000000085329.jpg
+│   │   │   │   │   ├── 000000085911.jpg
+│   │   │   │   │   ├── 000000088345.jpg
+│   │   │   │   │   ├── 000000088970.jpg
+│   │   │   │   │   ├── 000000093261.jpg
+│   │   │   │   │   ├── 000000094157.jpg
+│   │   │   │   │   ├── 000000094185.jpg
+│   │   │   │   │   ├── 000000095069.jpg
+│   │   │   │   │   ├── 000000099039.jpg
+│   │   │   │   │   ├── 000000104198.jpg
+│   │   │   │   │   ├── 000000104619.jpg
+│   │   │   │   │   ├── 000000104669.jpg
+│   │   │   │   │   ├── 000000106881.jpg
+│   │   │   │   │   ├── 000000109827.jpg
+│   │   │   │   │   ├── 000000111609.jpg
+│   │   │   │   │   ├── 000000116825.jpg
+│   │   │   │   │   ├── 000000119088.jpg
+│   │   │   │   │   ├── 000000119445.jpg
+│   │   │   │   │   ├── 000000122672.jpg
+│   │   │   │   │   ├── 000000123633.jpg
+│   │   │   │   │   ├── 000000124798.jpg
+│   │   │   │   │   ├── 000000127660.jpg
+│   │   │   │   │   ├── 000000128148.jpg
+│   │   │   │   │   ├── 000000128372.jpg
+│   │   │   │   │   ├── 000000134096.jpg
+│   │   │   │   │   ├── 000000160728.jpg
+│   │   │   │   │   ├── 000000162130.jpg
+│   │   │   │   │   ├── 000000162858.jpg
+│   │   │   │   │   ├── 000000174371.jpg
+│   │   │   │   │   ├── 000000177065.jpg
+│   │   │   │   │   ├── 000000185250.jpg
+│   │   │   │   │   ├── 000000191288.jpg
+│   │   │   │   │   ├── 000000194471.jpg
+│   │   │   │   │   ├── 000000200839.jpg
+│   │   │   │   │   ├── 000000206838.jpg
+│   │   │   │   │   ├── 000000208363.jpg
+│   │   │   │   │   ├── 000000209753.jpg
+│   │   │   │   │   ├── 000000210915.jpg
+│   │   │   │   │   ├── 000000213255.jpg
+│   │   │   │   │   ├── 000000213605.jpg
+│   │   │   │   │   ├── 000000220310.jpg
+│   │   │   │   │   ├── 000000228436.jpg
+│   │   │   │   │   ├── 000000230008.jpg
+│   │   │   │   │   ├── 000000232348.jpg
+│   │   │   │   │   ├── 000000239041.jpg
+│   │   │   │   │   ├── 000000239537.jpg
+│   │   │   │   │   ├── 000000239857.jpg
+│   │   │   │   │   ├── 000000255749.jpg
+│   │   │   │   │   ├── 000000255917.jpg
+│   │   │   │   │   ├── 000000281447.jpg
+│   │   │   │   │   ├── 000000293300.jpg
+│   │   │   │   │   ├── 000000294163.jpg
+│   │   │   │   │   ├── 000000296657.jpg
+│   │   │   │   │   ├── 000000304545.jpg
+│   │   │   │   │   ├── 000000304560.jpg
+│   │   │   │   │   ├── 000000307598.jpg
+│   │   │   │   │   ├── 000000308753.jpg
+│   │   │   │   │   ├── 000000309655.jpg
+│   │   │   │   │   ├── 000000352684.jpg
+│   │   │   │   │   ├── 000000354307.jpg
+│   │   │   │   │   ├── 000000356531.jpg
+│   │   │   │   │   ├── 000000361586.jpg
+│   │   │   │   │   ├── 000000366711.jpg
+│   │   │   │   │   ├── 000000373315.jpg
+│   │   │   │   │   ├── 000000441442.jpg
+│   │   │   │   │   ├── 000000442009.jpg
+│   │   │   │   │   ├── 000000442661.jpg
+│   │   │   │   │   ├── 000000447169.jpg
+│   │   │   │   │   ├── 000000447187.jpg
+│   │   │   │   │   ├── 000000463618.jpg
+│   │   │   │   │   ├── 000000466602.jpg
+│   │   │   │   │   ├── 000000475779.jpg
+│   │   │   │   │   ├── 000000476704.jpg
+│   │   │   │   │   ├── 000000481413.jpg
+│   │   │   │   │   ├── 000000497568.jpg
+│   │   │   │   │   ├── 000000497599.jpg
+│   │   │   │   │   ├── 000000498747.jpg
+│   │   │   │   │   ├── 000000532761.jpg
+│   │   │   │   │   ├── 000000547502.jpg
+│   │   │   │   │   ├── 000000549167.jpg
+│   │   │   │   │   ├── 000000550939.jpg
+│   │   │   │   │   ├── 000000562443.jpg
+│   │   │   │   │   ├── 000000579091.jpg
+│   │   │   │   │   └── 000000580418.jpg
+│   │   │   │   ├── ILSVRC2012
+│   │   │   │   │   ├── n01440764_9572.JPEG
+│   │   │   │   │   ├── n01531178_12753.JPEG
+│   │   │   │   │   ├── n01537544_17475.JPEG
+│   │   │   │   │   ├── n01608432_4202.JPEG
+│   │   │   │   │   ├── n01614925_2815.JPEG
+│   │   │   │   │   ├── n01677366_10461.JPEG
+│   │   │   │   │   ├── n01687978_7572.JPEG
+│   │   │   │   │   ├── n01693334_8607.JPEG
+│   │   │   │   │   ├── n01873310_5754.JPEG
+│   │   │   │   │   ├── n01945685_2841.JPEG
+│   │   │   │   │   ├── n01980166_1353.JPEG
+│   │   │   │   │   ├── n01986214_13350.JPEG
+│   │   │   │   │   ├── n02006656_7568.JPEG
+│   │   │   │   │   ├── n02087394_10998.JPEG
+│   │   │   │   │   ├── n02088632_2454.JPEG
+│   │   │   │   │   ├── n02090379_7346.JPEG
+│   │   │   │   │   ├── n02093428_258.JPEG
+│   │   │   │   │   ├── n02114548_11970.JPEG
+│   │   │   │   │   ├── n02114712_17845.JPEG
+│   │   │   │   │   ├── n02492035_3682.JPEG
+│   │   │   │   │   ├── n02493793_2257.JPEG
+│   │   │   │   │   ├── n02504013_5495.JPEG
+│   │   │   │   │   ├── n02504458_4570.JPEG
+│   │   │   │   │   ├── n02692877_16107.JPEG
+│   │   │   │   │   ├── n02769748_5957.JPEG
+│   │   │   │   │   ├── n02794156_5640.JPEG
+│   │   │   │   │   ├── n02797295_2747.JPEG
+│   │   │   │   │   ├── n02974003_485.JPEG
+│   │   │   │   │   ├── n02999410_6888.JPEG
+│   │   │   │   │   ├── n03065424_19002.JPEG
+│   │   │   │   │   ├── n03089624_25550.JPEG
+│   │   │   │   │   ├── n03127747_6946.JPEG
+│   │   │   │   │   ├── n03133878_8392.JPEG
+│   │   │   │   │   ├── n03160309_36033.JPEG
+│   │   │   │   │   ├── n03197337_2084.JPEG
+│   │   │   │   │   ├── n03201208_8701.JPEG
+│   │   │   │   │   ├── n03207941_5855.JPEG
+│   │   │   │   │   ├── n03271574_19709.JPEG
+│   │   │   │   │   ├── n03272010_15068.JPEG
+│   │   │   │   │   ├── n03347037_10258.JPEG
+│   │   │   │   │   ├── n03388183_20899.JPEG
+│   │   │   │   │   ├── n03394916_45101.JPEG
+│   │   │   │   │   ├── n03417042_7021.JPEG
+│   │   │   │   │   ├── n03424325_12181.JPEG
+│   │   │   │   │   ├── n03461385_37521.JPEG
+│   │   │   │   │   ├── n03478589_13939.JPEG
+│   │   │   │   │   ├── n03485407_3736.JPEG
+│   │   │   │   │   ├── n03529860_14341.JPEG
+│   │   │   │   │   ├── n03544143_8466.JPEG
+│   │   │   │   │   ├── n03584254_3235.JPEG
+│   │   │   │   │   ├── n03584829_50519.JPEG
+│   │   │   │   │   ├── n03710721_15280.JPEG
+│   │   │   │   │   ├── n03717622_8709.JPEG
+│   │   │   │   │   ├── n03729826_11284.JPEG
+│   │   │   │   │   ├── n03733131_5889.JPEG
+│   │   │   │   │   ├── n03733805_12429.JPEG
+│   │   │   │   │   ├── n03743016_33596.JPEG
+│   │   │   │   │   ├── n03764736_3936.JPEG
+│   │   │   │   │   ├── n03770679_1637.JPEG
+│   │   │   │   │   ├── n03785016_1790.JPEG
+│   │   │   │   │   ├── n03791053_20338.JPEG
+│   │   │   │   │   ├── n03803284_21720.JPEG
+│   │   │   │   │   ├── n03843555_315.JPEG
+│   │   │   │   │   ├── n03866082_8749.JPEG
+│   │   │   │   │   ├── n03873416_22087.JPEG
+│   │   │   │   │   ├── n03908714_2688.JPEG
+│   │   │   │   │   ├── n03938244_7517.JPEG
+│   │   │   │   │   ├── n03950228_30522.JPEG
+│   │   │   │   │   ├── n03956157_25404.JPEG
+│   │   │   │   │   ├── n03958227_6033.JPEG
+│   │   │   │   │   ├── n03961711_4058.JPEG
+│   │   │   │   │   ├── n03982430_30678.JPEG
+│   │   │   │   │   ├── n03991062_25555.JPEG
+│   │   │   │   │   ├── n03998194_1634.JPEG
+│   │   │   │   │   ├── n04008634_34360.JPEG
+│   │   │   │   │   ├── n04039381_11350.JPEG
+│   │   │   │   │   ├── n04041544_20695.JPEG
+│   │   │   │   │   ├── n04044716_2780.JPEG
+│   │   │   │   │   ├── n04069434_12872.JPEG
+│   │   │   │   │   ├── n04111531_18589.JPEG
+│   │   │   │   │   ├── n04118538_4548.JPEG
+│   │   │   │   │   ├── n04153751_31097.JPEG
+│   │   │   │   │   ├── n04154565_5180.JPEG
+│   │   │   │   │   ├── n04201297_16783.JPEG
+│   │   │   │   │   ├── n04204347_3335.JPEG
+│   │   │   │   │   ├── n04228054_7836.JPEG
+│   │   │   │   │   ├── n04254680_7339.JPEG
+│   │   │   │   │   ├── n04493381_63238.JPEG
+│   │   │   │   │   ├── n04522168_2748.JPEG
+│   │   │   │   │   ├── n04523525_20922.JPEG
+│   │   │   │   │   ├── n04525305_4719.JPEG
+│   │   │   │   │   ├── n04532670_6976.JPEG
+│   │   │   │   │   ├── n04548280_3080.JPEG
+│   │   │   │   │   ├── n04554684_28139.JPEG
+│   │   │   │   │   ├── n04589890_4428.JPEG
+│   │   │   │   │   ├── n04592741_11853.JPEG
+│   │   │   │   │   ├── n04604644_11358.JPEG
+│   │   │   │   │   ├── n06359193_64816.JPEG
+│   │   │   │   │   ├── n06596364_12523.JPEG
+│   │   │   │   │   ├── n07248320_33869.JPEG
+│   │   │   │   │   ├── synset_words.txt
+│   │   │   │   │   └── sysnet_2015.txt
+│   │   │   │   ├── LFW
+│   │   │   │   │   ├── Aaron_Pena_0001.jpg
+│   │   │   │   │   ├── Ali_Naimi_0007.jpg
+│   │   │   │   │   ├── Alvaro_Uribe_0017.jpg
+│   │   │   │   │   ├── Andrew_Luster_0001.jpg
+│   │   │   │   │   ├── Angelina_Jolie_0007.jpg
+│   │   │   │   │   ├── Angel_Lockward_0001.jpg
+│   │   │   │   │   ├── Anthony_Hopkins_0002.jpg
+│   │   │   │   │   ├── Asa_Hutchinson_0001.jpg
+│   │   │   │   │   ├── Ben_Cahoon_0001.jpg
+│   │   │   │   │   ├── Bill_McBride_0005.jpg
+│   │   │   │   │   ├── Bill_Simon_0015.jpg
+│   │   │   │   │   ├── Binyamin_Ben-Eliezer_0001.jpg
+│   │   │   │   │   ├── Bonnie_Hunt_0001.jpg
+│   │   │   │   │   ├── Boris_Becker_0005.jpg
+│   │   │   │   │   ├── Brian_Cook_0001.jpg
+│   │   │   │   │   ├── Casy_Preslar_0001.jpg
+│   │   │   │   │   ├── Christoph_Daum_0001.jpg
+│   │   │   │   │   ├── Cindy_Moll_0001.jpg
+│   │   │   │   │   ├── Colin_Powell_0198.jpg
+│   │   │   │   │   ├── Cristiano_da_Matta_0001.jpg
+│   │   │   │   │   ├── Daniell_Sunjata_0001.jpg
+│   │   │   │   │   ├── David_Heymann_0001.jpg
+│   │   │   │   │   ├── David_Hilt_0001.jpg
+│   │   │   │   │   ├── Donald_Keck_0001.jpg
+│   │   │   │   │   ├── Donald_Rumsfeld_0021.jpg
+│   │   │   │   │   ├── Donald_Rumsfeld_0048.jpg
+│   │   │   │   │   ├── Ed_Mekertichian_0001.jpg
+│   │   │   │   │   ├── Eduardo_Chillida_0001.jpg
+│   │   │   │   │   ├── Elizabeth_Hurley_0001.jpg
+│   │   │   │   │   ├── Emma_Watson_0002.jpg
+│   │   │   │   │   ├── Fernando_Gonzalez_0002.jpg
+│   │   │   │   │   ├── George_HW_Bush_0007.jpg
+│   │   │   │   │   ├── George_HW_Bush_0013.jpg
+│   │   │   │   │   ├── George_Robertson_0021.jpg
+│   │   │   │   │   ├── George_W_Bush_0125.jpg
+│   │   │   │   │   ├── George_W_Bush_0310.jpg
+│   │   │   │   │   ├── George_W_Bush_0330.jpg
+│   │   │   │   │   ├── George_W_Bush_0529.jpg
+│   │   │   │   │   ├── Gerhard_Schroeder_0006.jpg
+│   │   │   │   │   ├── Gerhard_Schroeder_0011.jpg
+│   │   │   │   │   ├── Gustavo_Franco_0001.jpg
+│   │   │   │   │   ├── Hans_Blix_0031.jpg
+│   │   │   │   │   ├── Heizo_Takenaka_0001.jpg
+│   │   │   │   │   ├── Imad_Khadduri_0001.jpg
+│   │   │   │   │   ├── Iva_Majoli_0001.jpg
+│   │   │   │   │   ├── Jackie_Chan_0008.jpg
+│   │   │   │   │   ├── Jackie_Sherrill_0001.jpg
+│   │   │   │   │   ├── Jacques_Rogge_0010.jpg
+│   │   │   │   │   ├── Janela_Jara_0001.jpg
+│   │   │   │   │   ├── Jane_Russell_0001.jpg
+│   │   │   │   │   ├── Janet_Napolitano_0001.jpg
+│   │   │   │   │   ├── Jennette_Bradley_0001.jpg
+│   │   │   │   │   ├── Jim_Wessling_0001.jpg
+│   │   │   │   │   ├── John_Bolton_0017.jpg
+│   │   │   │   │   ├── John_Burkett_0001.jpg
+│   │   │   │   │   ├── John_Manley_0003.jpg
+│   │   │   │   │   ├── Jose_Maria_Aznar_0002.jpg
+│   │   │   │   │   ├── Jose_Vicente_Rangel_0001.jpg
+│   │   │   │   │   ├── Kim_Dae-jung_0004.jpg
+│   │   │   │   │   ├── Larry_Templeton_0001.jpg
+│   │   │   │   │   ├── Laura_Bush_0025.jpg
+│   │   │   │   │   ├── Lee_Yeo-jin_0001.jpg
+│   │   │   │   │   ├── Leonardo_Fernandez_0001.jpg
+│   │   │   │   │   ├── Luciano_Pavarotti_0002.jpg
+│   │   │   │   │   ├── Mahathir_Mohamad_0002.jpg
+│   │   │   │   │   ├── Margaret_Okayo_0001.jpg
+│   │   │   │   │   ├── Marion_Fahnestock_0001.jpg
+│   │   │   │   │   ├── Matt_Anderson_0001.jpg
+│   │   │   │   │   ├── Michael_Schumacher_0006.jpg
+│   │   │   │   │   ├── Mike_Matthews_0001.jpg
+│   │   │   │   │   ├── Mitoji_Yabunaka_0002.jpg
+│   │   │   │   │   ├── Mohammed_Al-Douri_0012.jpg
+│   │   │   │   │   ├── Natanaela_Barnova_0001.jpg
+│   │   │   │   │   ├── Nestor_Kirchner_0022.jpg
+│   │   │   │   │   ├── Nova_Esther_Guthrie_0001.jpg
+│   │   │   │   │   ├── Oliver_Stone_0001.jpg
+│   │   │   │   │   ├── Paul_Martin_0008.jpg
+│   │   │   │   │   ├── Pedro_Malan_0004.jpg
+│   │   │   │   │   ├── Pete_Sampras_0006.jpg
+│   │   │   │   │   ├── Pierce_Brosnan_0006.jpg
+│   │   │   │   │   ├── Prince_Naruhito_0001.jpg
+│   │   │   │   │   ├── Prince_Willem-Alexander_0002.jpg
+│   │   │   │   │   ├── Ramon_Santana_0001.jpg
+│   │   │   │   │   ├── Rand_Beers_0001.jpg
+│   │   │   │   │   ├── Ray_Halbritter_0001.jpg
+│   │   │   │   │   ├── Renee_Zellweger_0012.jpg
+│   │   │   │   │   ├── Richard_Armitage_0005.jpg
+│   │   │   │   │   ├── Richard_Branson_0002.jpg
+│   │   │   │   │   ├── Richard_Haass_0001.jpg
+│   │   │   │   │   ├── Robert_Redford_0007.jpg
+│   │   │   │   │   ├── Romano_Prodi_0003.jpg
+│   │   │   │   │   ├── Shimon_Peres_0005.jpg
+│   │   │   │   │   ├── Steve_Lavin_0002.jpg
+│   │   │   │   │   ├── Timbul_Silaen_0001.jpg
+│   │   │   │   │   ├── Tony_Blair_0035.jpg
+│   │   │   │   │   ├── Tony_Blair_0081.jpg
+│   │   │   │   │   ├── Tony_Blair_0119.jpg
+│   │   │   │   │   ├── Winona_Ryder_0009.jpg
+│   │   │   │   │   ├── Yann_Martel_0001.jpg
+│   │   │   │   │   └── Yasser_Arafat_0005.jpg
+│   │   │   │   ├── MaskRCNN
+│   │   │   │   │   └── CONFIG_MaskRCNN.yaml
+│   │   │   │   ├── MNIST
+│   │   │   │   │   ├── 11.jpg
+│   │   │   │   │   ├── 13.jpg
+│   │   │   │   │   ├── 15.jpg
+│   │   │   │   │   ├── 17.jpg
+│   │   │   │   │   ├── 19.jpg
+│   │   │   │   │   ├── 1.jpg
+│   │   │   │   │   ├── 3.jpg
+│   │   │   │   │   ├── 5.jpg
+│   │   │   │   │   ├── 7.jpg
+│   │   │   │   │   └── 9.jpg
+│   │   │   │   ├── PPOCRCH
+│   │   │   │   │   ├── raw
+│   │   │   │   │   │   ├── gt_1000.jpg
+│   │   │   │   │   │   ├── gt_1064.jpg
+│   │   │   │   │   │   ├── gt_1162.jpg
+│   │   │   │   │   │   ├── gt_1269.jpg
+│   │   │   │   │   │   ├── gt_1276.jpg
+│   │   │   │   │   │   ├── gt_1537.jpg
+│   │   │   │   │   │   ├── gt_1616.jpg
+│   │   │   │   │   │   ├── gt_161.jpg
+│   │   │   │   │   │   ├── gt_1669.jpg
+│   │   │   │   │   │   ├── gt_1748.jpg
+│   │   │   │   │   │   ├── gt_1915.jpg
+│   │   │   │   │   │   ├── gt_198.jpg
+│   │   │   │   │   │   ├── gt_2122.jpg
+│   │   │   │   │   │   ├── gt_2181.jpg
+│   │   │   │   │   │   ├── gt_222.jpg
+│   │   │   │   │   │   ├── gt_2307.jpg
+│   │   │   │   │   │   ├── gt_240.jpg
+│   │   │   │   │   │   ├── gt_2435.jpg
+│   │   │   │   │   │   ├── gt_2466.jpg
+│   │   │   │   │   │   ├── gt_2488.jpg
+│   │   │   │   │   │   ├── gt_2511.jpg
+│   │   │   │   │   │   ├── gt_2550.jpg
+│   │   │   │   │   │   ├── gt_2616.jpg
+│   │   │   │   │   │   ├── gt_2649.jpg
+│   │   │   │   │   │   ├── gt_2729.jpg
+│   │   │   │   │   │   ├── gt_3045.jpg
+│   │   │   │   │   │   ├── gt_3069.jpg
+│   │   │   │   │   │   ├── gt_3071.jpg
+│   │   │   │   │   │   ├── gt_3080.jpg
+│   │   │   │   │   │   ├── gt_3172.jpg
+│   │   │   │   │   │   ├── gt_3332.jpg
+│   │   │   │   │   │   ├── gt_3338.jpg
+│   │   │   │   │   │   ├── gt_3393.jpg
+│   │   │   │   │   │   ├── gt_3550.jpg
+│   │   │   │   │   │   ├── gt_373.jpg
+│   │   │   │   │   │   ├── gt_3761.jpg
+│   │   │   │   │   │   ├── gt_3848.jpg
+│   │   │   │   │   │   ├── gt_3851.jpg
+│   │   │   │   │   │   ├── gt_4057.jpg
+│   │   │   │   │   │   ├── gt_4079.jpg
+│   │   │   │   │   │   ├── gt_4371.jpg
+│   │   │   │   │   │   ├── gt_442.jpg
+│   │   │   │   │   │   ├── gt_4562.jpg
+│   │   │   │   │   │   ├── gt_4746.jpg
+│   │   │   │   │   │   ├── gt_4761.jpg
+│   │   │   │   │   │   ├── gt_4902.jpg
+│   │   │   │   │   │   ├── gt_5019.jpg
+│   │   │   │   │   │   ├── gt_5039.jpg
+│   │   │   │   │   │   ├── gt_5299.jpg
+│   │   │   │   │   │   ├── gt_5303.jpg
+│   │   │   │   │   │   ├── gt_54.jpg
+│   │   │   │   │   │   ├── gt_5612.jpg
+│   │   │   │   │   │   ├── gt_5639.jpg
+│   │   │   │   │   │   ├── gt_5731.jpg
+│   │   │   │   │   │   ├── gt_5895.jpg
+│   │   │   │   │   │   ├── gt_5899.jpg
+│   │   │   │   │   │   ├── gt_5917.jpg
+│   │   │   │   │   │   ├── gt_5920.jpg
+│   │   │   │   │   │   ├── gt_5992.jpg
+│   │   │   │   │   │   ├── gt_5998.jpg
+│   │   │   │   │   │   ├── gt_6072.jpg
+│   │   │   │   │   │   ├── gt_6167.jpg
+│   │   │   │   │   │   ├── gt_6238.jpg
+│   │   │   │   │   │   ├── gt_6276.jpg
+│   │   │   │   │   │   ├── gt_6589.jpg
+│   │   │   │   │   │   ├── gt_6744.jpg
+│   │   │   │   │   │   ├── gt_6753.jpg
+│   │   │   │   │   │   ├── gt_6923.jpg
+│   │   │   │   │   │   ├── gt_6933.jpg
+│   │   │   │   │   │   ├── gt_7293.jpg
+│   │   │   │   │   │   ├── gt_7346.jpg
+│   │   │   │   │   │   ├── gt_7362.jpg
+│   │   │   │   │   │   ├── gt_7421.jpg
+│   │   │   │   │   │   ├── gt_753.jpg
+│   │   │   │   │   │   ├── gt_7579.jpg
+│   │   │   │   │   │   ├── gt_7597.jpg
+│   │   │   │   │   │   ├── gt_7645.jpg
+│   │   │   │   │   │   ├── gt_7683.jpg
+│   │   │   │   │   │   ├── gt_7699.jpg
+│   │   │   │   │   │   ├── gt_7724.jpg
+│   │   │   │   │   │   ├── gt_7757.jpg
+│   │   │   │   │   │   ├── gt_7907.jpg
+│   │   │   │   │   │   ├── gt_7917.jpg
+│   │   │   │   │   │   ├── gt_7918.jpg
+│   │   │   │   │   │   ├── gt_7989.jpg
+│   │   │   │   │   │   ├── gt_8016.jpg
+│   │   │   │   │   │   ├── gt_8078.jpg
+│   │   │   │   │   │   ├── gt_8370.jpg
+│   │   │   │   │   │   ├── gt_8464.jpg
+│   │   │   │   │   │   ├── gt_8517.jpg
+│   │   │   │   │   │   ├── gt_867.jpg
+│   │   │   │   │   │   ├── gt_8943.jpg
+│   │   │   │   │   │   ├── gt_903.jpg
+│   │   │   │   │   │   ├── gt_9465.jpg
+│   │   │   │   │   │   ├── gt_9541.jpg
+│   │   │   │   │   │   ├── gt_9666.jpg
+│   │   │   │   │   │   ├── gt_969.jpg
+│   │   │   │   │   │   ├── gt_9815.jpg
+│   │   │   │   │   │   ├── gt_9932.jpg
+│   │   │   │   │   │   └── gt_9993.jpg
+│   │   │   │   │   └── words
+│   │   │   │   │       ├── img_0039404.jpg
+│   │   │   │   │       ├── img_0044047.jpg
+│   │   │   │   │       ├── img_0054249.jpg
+│   │   │   │   │       ├── img_0068516.jpg
+│   │   │   │   │       ├── img_0072650.jpg
+│   │   │   │   │       ├── img_0077753.jpg
+│   │   │   │   │       ├── img_0084388.jpg
+│   │   │   │   │       ├── img_0094768.jpg
+│   │   │   │   │       ├── img_0096415.jpg
+│   │   │   │   │       ├── img_0101447.jpg
+│   │   │   │   │       ├── img_0102491.jpg
+│   │   │   │   │       ├── img_0107373.jpg
+│   │   │   │   │       ├── img_0108786.jpg
+│   │   │   │   │       ├── img_0153226.jpg
+│   │   │   │   │       ├── img_0158136.jpg
+│   │   │   │   │       ├── img_0166876.jpg
+│   │   │   │   │       ├── img_0171356.jpg
+│   │   │   │   │       ├── img_0171402.jpg
+│   │   │   │   │       ├── img_0171632.jpg
+│   │   │   │   │       ├── img_0178533.jpg
+│   │   │   │   │       ├── img_0183229.jpg
+│   │   │   │   │       ├── img_0187724.jpg
+│   │   │   │   │       ├── img_0189056.jpg
+│   │   │   │   │       ├── img_0201677.jpg
+│   │   │   │   │       ├── img_0201680.jpg
+│   │   │   │   │       ├── img_0204617.jpg
+│   │   │   │   │       ├── img_0218451.jpg
+│   │   │   │   │       ├── img_0223009.jpg
+│   │   │   │   │       ├── img_0225144.jpg
+│   │   │   │   │       ├── img_0248959.jpg
+│   │   │   │   │       ├── img_0272681.jpg
+│   │   │   │   │       ├── img_0277381.jpg
+│   │   │   │   │       ├── img_0277434.jpg
+│   │   │   │   │       ├── img_0278472.jpg
+│   │   │   │   │       ├── img_0285030.jpg
+│   │   │   │   │       ├── img_0290599.jpg
+│   │   │   │   │       ├── img_0293215.jpg
+│   │   │   │   │       ├── img_0319753.jpg
+│   │   │   │   │       ├── img_0333510.jpg
+│   │   │   │   │       ├── img_0344889.jpg
+│   │   │   │   │       ├── img_0374983.jpg
+│   │   │   │   │       ├── img_0375265.jpg
+│   │   │   │   │       ├── img_0376525.jpg
+│   │   │   │   │       ├── img_0376584.jpg
+│   │   │   │   │       ├── img_0380503.jpg
+│   │   │   │   │       ├── img_0381162.jpg
+│   │   │   │   │       ├── img_0383503.jpg
+│   │   │   │   │       ├── img_0383656.jpg
+│   │   │   │   │       ├── img_0383796.jpg
+│   │   │   │   │       ├── img_0425648.jpg
+│   │   │   │   │       ├── img_0435698.jpg
+│   │   │   │   │       ├── img_0436724.jpg
+│   │   │   │   │       ├── img_0440363.jpg
+│   │   │   │   │       ├── img_0444070.jpg
+│   │   │   │   │       ├── img_0454672.jpg
+│   │   │   │   │       ├── img_0464114.jpg
+│   │   │   │   │       ├── img_0477439.jpg
+│   │   │   │   │       ├── img_0477967.jpg
+│   │   │   │   │       ├── img_0499961.jpg
+│   │   │   │   │       ├── img_0501920.jpg
+│   │   │   │   │       ├── img_0513581.jpg
+│   │   │   │   │       ├── img_0530192.jpg
+│   │   │   │   │       ├── img_0540874.jpg
+│   │   │   │   │       ├── img_0555978.jpg
+│   │   │   │   │       ├── img_0556843.jpg
+│   │   │   │   │       ├── img_0562615.jpg
+│   │   │   │   │       ├── img_0579487.jpg
+│   │   │   │   │       ├── img_0587691.jpg
+│   │   │   │   │       ├── img_0593510.jpg
+│   │   │   │   │       ├── img_0602107.jpg
+│   │   │   │   │       ├── img_0609731.jpg
+│   │   │   │   │       ├── img_0610478.jpg
+│   │   │   │   │       ├── img_0625067.jpg
+│   │   │   │   │       ├── img_0628676.jpg
+│   │   │   │   │       ├── img_0632393.jpg
+│   │   │   │   │       ├── img_0657950.jpg
+│   │   │   │   │       ├── img_0660675.jpg
+│   │   │   │   │       ├── img_0662065.jpg
+│   │   │   │   │       ├── img_0681796.jpg
+│   │   │   │   │       ├── img_0687703.jpg
+│   │   │   │   │       ├── img_0703402.jpg
+│   │   │   │   │       ├── img_0717299.jpg
+│   │   │   │   │       ├── img_0719590.jpg
+│   │   │   │   │       ├── img_0723890.jpg
+│   │   │   │   │       ├── img_0740181.jpg
+│   │   │   │   │       ├── img_0748593.jpg
+│   │   │   │   │       ├── img_0758166.jpg
+│   │   │   │   │       ├── img_0763096.jpg
+│   │   │   │   │       ├── img_0779873.jpg
+│   │   │   │   │       ├── img_0800365.jpg
+│   │   │   │   │       ├── img_0856305.jpg
+│   │   │   │   │       ├── img_0867196.jpg
+│   │   │   │   │       ├── img_0880229.jpg
+│   │   │   │   │       ├── img_0911800.jpg
+│   │   │   │   │       ├── img_0937976.jpg
+│   │   │   │   │       ├── img_0951435.jpg
+│   │   │   │   │       ├── img_0959816.jpg
+│   │   │   │   │       ├── img_0969024.jpg
+│   │   │   │   │       ├── img_0975603.jpg
+│   │   │   │   │       └── img_0999432.jpg
+│   │   │   │   ├── RoBertA
+│   │   │   │   │   ├── roberta_input_0.npz
+│   │   │   │   │   ├── roberta_input_10.npz
+│   │   │   │   │   ├── roberta_input_11.npz
+│   │   │   │   │   ├── roberta_input_12.npz
+│   │   │   │   │   ├── roberta_input_13.npz
+│   │   │   │   │   ├── roberta_input_14.npz
+│   │   │   │   │   ├── roberta_input_15.npz
+│   │   │   │   │   ├── roberta_input_16.npz
+│   │   │   │   │   ├── roberta_input_17.npz
+│   │   │   │   │   ├── roberta_input_18.npz
+│   │   │   │   │   ├── roberta_input_19.npz
+│   │   │   │   │   ├── roberta_input_1.npz
+│   │   │   │   │   ├── roberta_input_2.npz
+│   │   │   │   │   ├── roberta_input_3.npz
+│   │   │   │   │   ├── roberta_input_4.npz
+│   │   │   │   │   ├── roberta_input_5.npz
+│   │   │   │   │   ├── roberta_input_6.npz
+│   │   │   │   │   ├── roberta_input_7.npz
+│   │   │   │   │   ├── roberta_input_8.npz
+│   │   │   │   │   └── roberta_input_9.npz
+│   │   │   │   └── WIDER
+│   │   │   │       ├── 0_Parade_marchingband_1_76.jpg
+│   │   │   │       ├── 0_Parade_Parade_0_19.jpg
+│   │   │   │       ├── 0_Parade_Parade_0_640.jpg
+│   │   │   │       ├── 10_People_Marching_People_Marching_10_People_Marching_People_Marching_10_People_Marching_People_Marching_10_770.jpg
+│   │   │   │       ├── 10_People_Marching_People_Marching_2_502.jpg
+│   │   │   │       ├── 10_People_Marching_People_Marching_2_522.jpg
+│   │   │   │       ├── 11_Meeting_Meeting_11_Meeting_Meeting_11_1038.jpg
+│   │   │   │       ├── 11_Meeting_Meeting_11_Meeting_Meeting_11_247.jpg
+│   │   │   │       ├── 11_Meeting_Meeting_11_Meeting_Meeting_11_589.jpg
+│   │   │   │       ├── 12_Group_Large_Group_12_Group_Large_Group_12_779.jpg
+│   │   │   │       ├── 12_Group_Team_Organized_Group_12_Group_Team_Organized_Group_12_20.jpg
+│   │   │   │       ├── 12_Group_Team_Organized_Group_12_Group_Team_Organized_Group_12_908.jpg
+│   │   │   │       ├── 13_Interview_Interview_2_People_Visible_13_290.jpg
+│   │   │   │       ├── 13_Interview_Interview_2_People_Visible_13_345.jpg
+│   │   │   │       ├── 13_Interview_Interview_Sequences_13_248.jpg
+│   │   │   │       ├── 14_Traffic_Traffic_14_186.jpg
+│   │   │   │       ├── 14_Traffic_Traffic_14_518.jpg
+│   │   │   │       ├── 14_Traffic_Traffic_14_726.jpg
+│   │   │   │       ├── 15_Stock_Market_Stock_Market_15_250.jpg
+│   │   │   │       ├── 15_Stock_Market_Stock_Market_15_611.jpg
+│   │   │   │       ├── 15_Stock_Market_Stock_Market_15_640.jpg
+│   │   │   │       ├── 16_Award_Ceremony_Awards_Ceremony_16_109.jpg
+│   │   │   │       ├── 16_Award_Ceremony_Awards_Ceremony_16_254.jpg
+│   │   │   │       ├── 16_Award_Ceremony_Awards_Ceremony_16_349.jpg
+│   │   │   │       ├── 17_Ceremony_Ceremony_17_397.jpg
+│   │   │   │       ├── 17_Ceremony_Ceremony_17_48.jpg
+│   │   │   │       ├── 17_Ceremony_Ceremony_17_800.jpg
+│   │   │   │       ├── 18_Concerts_Concerts_18_411.jpg
+│   │   │   │       ├── 18_Concerts_Concerts_18_58.jpg
+│   │   │   │       ├── 18_Concerts_Concerts_18_827.jpg
+│   │   │   │       ├── 19_Couple_Couple_19_318.jpg
+│   │   │   │       ├── 19_Couple_Couple_19_33.jpg
+│   │   │   │       ├── 19_Couple_Couple_19_456.jpg
+│   │   │   │       ├── 1_Handshaking_Handshaking_1_406.jpg
+│   │   │   │       ├── 1_Handshaking_Handshaking_1_557.jpg
+│   │   │   │       ├── 1_Handshaking_Handshaking_1_618.jpg
+│   │   │   │       ├── 20_Family_Group_Family_Group_20_217.jpg
+│   │   │   │       ├── 20_Family_Group_Family_Group_20_376.jpg
+│   │   │   │       ├── 20_Family_Group_Family_Group_20_435.jpg
+│   │   │   │       ├── 21_Festival_Festival_21_34.jpg
+│   │   │   │       ├── 21_Festival_Festival_21_736.jpg
+│   │   │   │       ├── 21_Festival_Festival_21_928.jpg
+│   │   │   │       ├── 22_Picnic_Picnic_22_553.jpg
+│   │   │   │       ├── 22_Picnic_Picnic_22_717.jpg
+│   │   │   │       ├── 22_Picnic_Picnic_22_808.jpg
+│   │   │   │       ├── 23_Shoppers_Shoppers_23_16.jpg
+│   │   │   │       ├── 23_Shoppers_Shoppers_23_426.jpg
+│   │   │   │       ├── 23_Shoppers_Shoppers_23_489.jpg
+│   │   │   │       ├── 24_Soldier_Firing_Soldier_Firing_24_22.jpg
+│   │   │   │       ├── 24_Soldier_Firing_Soldier_Firing_24_241.jpg
+│   │   │   │       ├── 24_Soldier_Firing_Soldier_Firing_24_607.jpg
+│   │   │   │       ├── 25_Soldier_Patrol_Soldier_Patrol_25_484.jpg
+│   │   │   │       ├── 25_Soldier_Patrol_Soldier_Patrol_25_618.jpg
+│   │   │   │       ├── 25_Soldier_Patrol_Soldier_Patrol_25_813.jpg
+│   │   │   │       ├── 26_Soldier_Drilling_Soldiers_Drilling_26_110.jpg
+│   │   │   │       ├── 26_Soldier_Drilling_Soldiers_Drilling_26_258.jpg
+│   │   │   │       ├── 26_Soldier_Drilling_Soldiers_Drilling_26_525.jpg
+│   │   │   │       ├── 27_Spa_Spa_27_242.jpg
+│   │   │   │       ├── 27_Spa_Spa_27_244.jpg
+│   │   │   │       ├── 27_Spa_Spa_27_795.jpg
+│   │   │   │       ├── 28_Sports_Fan_Sports_Fan_28_193.jpg
+│   │   │   │       ├── 28_Sports_Fan_Sports_Fan_28_440.jpg
+│   │   │   │       ├── 28_Sports_Fan_Sports_Fan_28_910.jpg
+│   │   │   │       ├── 29_Students_Schoolkids_Students_Schoolkids_29_350.jpg
+│   │   │   │       ├── 29_Students_Schoolkids_Students_Schoolkids_29_892.jpg
+│   │   │   │       ├── 29_Students_Schoolkids_Students_Schoolkids_29_923.jpg
+│   │   │   │       ├── 2_Demonstration_Demonstration_Or_Protest_2_454.jpg
+│   │   │   │       ├── 2_Demonstration_Protesters_2_48.jpg
+│   │   │   │       ├── 2_Demonstration_Protesters_2_750.jpg
+│   │   │   │       ├── 30_Surgeons_Surgeons_30_351.jpg
+│   │   │   │       ├── 30_Surgeons_Surgeons_30_352.jpg
+│   │   │   │       ├── 30_Surgeons_Surgeons_30_595.jpg
+│   │   │   │       ├── 31_Waiter_Waitress_Waiter_Waitress_31_315.jpg
+│   │   │   │       ├── 31_Waiter_Waitress_Waiter_Waitress_31_538.jpg
+│   │   │   │       ├── 31_Waiter_Waitress_Waiter_Waitress_31_656.jpg
+│   │   │   │       ├── 32_Worker_Laborer_Worker_Laborer_32_304.jpg
+│   │   │   │       ├── 32_Worker_Laborer_Worker_Laborer_32_744.jpg
+│   │   │   │       ├── 32_Worker_Laborer_Worker_Laborer_32_79.jpg
+│   │   │   │       ├── 33_Running_Running_33_125.jpg
+│   │   │   │       ├── 33_Running_Running_33_430.jpg
+│   │   │   │       ├── 33_Running_Running_33_653.jpg
+│   │   │   │       ├── 34_Baseball_Baseball_34_192.jpg
+│   │   │   │       ├── 34_Baseball_Baseball_34_653.jpg
+│   │   │   │       ├── 34_Baseball_Baseball_34_65.jpg
+│   │   │   │       ├── 35_Basketball_Basketball_35_724.jpg
+│   │   │   │       ├── 35_Basketball_basketballgame_ball_35_715.jpg
+│   │   │   │       ├── 35_Basketball_playingbasketball_35_317.jpg
+│   │   │   │       ├── 36_Football_americanfootball_ball_36_31.jpg
+│   │   │   │       ├── 36_Football_americanfootball_ball_36_930.jpg
+│   │   │   │       ├── 36_Football_Football_36_42.jpg
+│   │   │   │       ├── 37_Soccer_Soccer_37_917.jpg
+│   │   │   │       ├── 37_Soccer_soccer_ball_37_282.jpg
+│   │   │   │       ├── 37_Soccer_soccer_ball_37_980.jpg
+│   │   │   │       ├── 38_Tennis_Tennis_38_343.jpg
+│   │   │   │       ├── 38_Tennis_Tennis_38_438.jpg
+│   │   │   │       ├── 38_Tennis_Tennis_38_605.jpg
+│   │   │   │       ├── 39_Ice_Skating_Ice_Skating_39_273.jpg
+│   │   │   │       ├── 39_Ice_Skating_iceskiing_39_569.jpg
+│   │   │   │       ├── 39_Ice_Skating_iceskiing_39_9.jpg
+│   │   │   │       ├── 3_Riot_Riot_3_133.jpg
+│   │   │   │       ├── 3_Riot_Riot_3_250.jpg
+│   │   │   │       ├── 3_Riot_Riot_3_681.jpg
+│   │   │   │       ├── 40_Gymnastics_Gymnastics_40_792.jpg
+│   │   │   │       ├── 40_Gymnastics_Gymnastics_40_797.jpg
+│   │   │   │       ├── 40_Gymnastics_Gymnastics_40_901.jpg
+│   │   │   │       ├── 41_Swimming_Swimmer_41_724.jpg
+│   │   │   │       ├── 41_Swimming_Swimming_41_140.jpg
+│   │   │   │       ├── 41_Swimming_Swimming_41_846.jpg
+│   │   │   │       ├── 42_Car_Racing_Car_Racing_42_82.jpg
+│   │   │   │       ├── 42_Car_Racing_Nascar_42_328.jpg
+│   │   │   │       ├── 42_Car_Racing_Nascar_42_836.jpg
+│   │   │   │       ├── 43_Row_Boat_Canoe_43_421.jpg
+│   │   │   │       ├── 43_Row_Boat_Canoe_43_82.jpg
+│   │   │   │       ├── 43_Row_Boat_Rowboat_43_455.jpg
+│   │   │   │       ├── 44_Aerobics_Aerobics_44_1040.jpg
+│   │   │   │       ├── 44_Aerobics_Aerobics_44_243.jpg
+│   │   │   │       ├── 44_Aerobics_Aerobics_44_680.jpg
+│   │   │   │       ├── 45_Balloonist_Balloonist_45_389.jpg
+│   │   │   │       ├── 45_Balloonist_Balloonist_45_523.jpg
+│   │   │   │       ├── 45_Balloonist_Balloonist_45_80.jpg
+│   │   │   │       ├── 46_Jockey_Jockey_46_144.jpg
+│   │   │   │       ├── 46_Jockey_Jockey_46_292.jpg
+│   │   │   │       ├── 46_Jockey_Jockey_46_560.jpg
+│   │   │   │       ├── 47_Matador_Bullfighter_Matador_Bullfighter_47_971.jpg
+│   │   │   │       ├── 47_Matador_Bullfighter_matadorbullfighting_47_186.jpg
+│   │   │   │       ├── 47_Matador_Bullfighter_matadorbullfighting_47_483.jpg
+│   │   │   │       ├── 48_Parachutist_Paratrooper_Parachutist_Paratrooper_48_676.jpg
+│   │   │   │       ├── 48_Parachutist_Paratrooper_Parachutist_Paratrooper_48_862.jpg
+│   │   │   │       ├── 48_Parachutist_Paratrooper_Parachutist_Paratrooper_48_995.jpg
+│   │   │   │       ├── 49_Greeting_peoplegreeting_49_167.jpg
+│   │   │   │       ├── 49_Greeting_peoplegreeting_49_793.jpg
+│   │   │   │       ├── 49_Greeting_peoplegreeting_49_86.jpg
+│   │   │   │       ├── 4_Dancing_Dancing_4_184.jpg
+│   │   │   │       ├── 4_Dancing_Dancing_4_460.jpg
+│   │   │   │       ├── 4_Dancing_Dancing_4_709.jpg
+│   │   │   │       ├── 50_Celebration_Or_Party_houseparty_50_137.jpg
+│   │   │   │       ├── 50_Celebration_Or_Party_houseparty_50_34.jpg
+│   │   │   │       ├── 50_Celebration_Or_Party_houseparty_50_939.jpg
+│   │   │   │       ├── 51_Dresses_wearingdress_51_175.jpg
+│   │   │   │       ├── 51_Dresses_wearingdress_51_297.jpg
+│   │   │   │       ├── 51_Dresses_wearingdress_51_59.jpg
+│   │   │   │       ├── 52_Photographers_taketouristphotos_52_327.jpg
+│   │   │   │       ├── 52_Photographers_taketouristphotos_52_617.jpg
+│   │   │   │       ├── 52_Photographers_taketouristphotos_52_652.jpg
+│   │   │   │       ├── 53_Raid_policeraid_53_523.jpg
+│   │   │   │       ├── 53_Raid_policeraid_53_575.jpg
+│   │   │   │       ├── 53_Raid_policeraid_53_671.jpg
+│   │   │   │       ├── 54_Rescue_firemanrescue_54_798.jpg
+│   │   │   │       ├── 54_Rescue_firemanrescue_54_850.jpg
+│   │   │   │       ├── 54_Rescue_rescuepeople_54_175.jpg
+│   │   │   │       ├── 55_Sports_Coach_Trainer_sportcoaching_55_272.jpg
+│   │   │   │       ├── 55_Sports_Coach_Trainer_sportcoaching_55_535.jpg
+│   │   │   │       ├── 55_Sports_Coach_Trainer_sportcoaching_55_561.jpg
+│   │   │   │       ├── 56_Voter_peoplevoting_56_240.jpg
+│   │   │   │       ├── 56_Voter_peoplevoting_56_281.jpg
+│   │   │   │       ├── 56_Voter_peoplevoting_56_939.jpg
+│   │   │   │       ├── 57_Angler_peoplefishing_57_1046.jpg
+│   │   │   │       ├── 57_Angler_peoplefishing_57_165.jpg
+│   │   │   │       ├── 57_Angler_peoplefishing_57_975.jpg
+│   │   │   │       ├── 58_Hockey_icehockey_puck_58_1013.jpg
+│   │   │   │       ├── 58_Hockey_icehockey_puck_58_1026.jpg
+│   │   │   │       ├── 58_Hockey_icehockey_puck_58_32.jpg
+│   │   │   │       ├── 59_peopledrivingcar_peopledrivingcar_59_164.jpg
+│   │   │   │       ├── 59_peopledrivingcar_peopledrivingcar_59_333.jpg
+│   │   │   │       ├── 59_peopledrivingcar_peopledrivingcar_59_474.jpg
+│   │   │   │       ├── 5_Car_Accident_Accident_5_604.jpg
+│   │   │   │       ├── 5_Car_Accident_Accident_5_654.jpg
+│   │   │   │       ├── 5_Car_Accident_Car_Crash_5_219.jpg
+│   │   │   │       ├── 61_Street_Battle_streetfight_61_217.jpg
+│   │   │   │       ├── 61_Street_Battle_streetfight_61_394.jpg
+│   │   │   │       ├── 61_Street_Battle_streetfight_61_595.jpg
+│   │   │   │       ├── 6_Funeral_Funeral_6_148.jpg
+│   │   │   │       ├── 6_Funeral_Funeral_6_281.jpg
+│   │   │   │       ├── 6_Funeral_Funeral_6_86.jpg
+│   │   │   │       ├── 7_Cheering_Cheering_7_314.jpg
+│   │   │   │       ├── 7_Cheering_Cheering_7_711.jpg
+│   │   │   │       ├── 7_Cheering_Cheering_7_912.jpg
+│   │   │   │       ├── 8_Election_Campain_Election_Campaign_8_292.jpg
+│   │   │   │       ├── 8_Election_Campain_Election_Campaign_8_494.jpg
+│   │   │   │       ├── 8_Election_Campain_Election_Campaign_8_67.jpg
+│   │   │   │       ├── 9_Press_Conference_Press_Conference_9_373.jpg
+│   │   │   │       ├── 9_Press_Conference_Press_Conference_9_48.jpg
+│   │   │   │       └── 9_Press_Conference_Press_Conference_9_528.jpg
+│   │   │   ├── eval
+│   │   │   │   ├── gen_model.sh
+│   │   │   │   ├── qat_config
+│   │   │   │   │   ├── mobilenet_v2_qat.cfg
+│   │   │   │   │   ├── mobilenet_v2_qat_ori.cfg
+│   │   │   │   │   ├── resnet18_qat.cfg
+│   │   │   │   │   ├── resnet18_qat_ori.cfg
+│   │   │   │   │   ├── resnet50_qat.cfg
+│   │   │   │   │   ├── resnet50_qat_ori.cfg
+│   │   │   │   │   ├── squeezenet1_1_qat.cfg
+│   │   │   │   │   ├── squeezenet1_1_qat_ori.cfg
+│   │   │   │   │   ├── vgg11_bn_qat.cfg
+│   │   │   │   │   ├── vgg11_bn_qat_ori.cfg
+│   │   │   │   │   ├── yolov5s_qat.cfg
+│   │   │   │   │   └── yolov5s_qat_ori.cfg
+│   │   │   │   └── run_eval.py
+│   │   │   ├── image
+│   │   │   │   ├── 0.png
+│   │   │   │   ├── 5.jpg
+│   │   │   │   ├── Aaron_Eckhart_0001.jpg
+│   │   │   │   ├── camvid.png
+│   │   │   │   ├── cat.jpg
+│   │   │   │   ├── city.png
+│   │   │   │   ├── dog.jpg
+│   │   │   │   ├── image_list.txt
+│   │   │   │   ├── parade.jpg
+│   │   │   │   ├── pose_256_192.jpg
+│   │   │   │   └── stock_market.jpg
+│   │   │   ├── main_entry.py
+│   │   │   ├── model
+│   │   │   │   ├── mobilenet_v2.caffemodel
+│   │   │   │   ├── mobilenet_v2_deploy.prototxt
+│   │   │   │   ├── README.md
+│   │   │   │   ├── resnet50_int8.tflite
+│   │   │   │   ├── yolov5s.onnx
+│   │   │   │   └── yolov5s.pt
+│   │   │   ├── npz_input
+│   │   │   │   ├── attention_block_0_1_input_data_batch_2.npz
+│   │   │   │   ├── attention_block_0_1_input_data.npz
+│   │   │   │   ├── bert-base_0.npz
+│   │   │   │   ├── bert_data.npz
+│   │   │   │   ├── cat.npz
+│   │   │   │   ├── downsample_block_0_input_data_batch_2.npz
+│   │   │   │   ├── downsample_block_0_input_data.npz
+│   │   │   │   ├── pp_yoloe_in_f32.npz
+│   │   │   │   ├── squad_data2.npz
+│   │   │   │   ├── squad_data.npz
+│   │   │   │   └── unet_input.npz
+│   │   │   ├── profile
+│   │   │   │   ├── cmd_125ada000_0_0.dat
+│   │   │   │   ├── cmd_125ade000_0_1.dat
+│   │   │   │   ├── cmd_125ae2000_1_0.dat
+│   │   │   │   ├── cmd_125ae3000_1_1.dat
+│   │   │   │   ├── global.profile
+│   │   │   │   ├── iter0.profile
+│   │   │   │   └── net_stat.sim
+│   │   │   ├── run_all.sh
+│   │   │   ├── run_model.py
+│   │   │   ├── run.sh
+│   │   │   └── script_test
+│   │   │       ├── libcipher.so
+│   │   │       ├── README.md
+│   │   │       ├── test10.py
+│   │   │       ├── test10.sh
+│   │   │       ├── test11.sh
+│   │   │       ├── test12.py
+│   │   │       ├── test12.sh
+│   │   │       ├── test1.sh
+│   │   │       ├── test2.py
+│   │   │       ├── test2.sh
+│   │   │       ├── test3.py
+│   │   │       ├── test3.sh
+│   │   │       ├── test4.sh
+│   │   │       ├── test5.sh
+│   │   │       ├── test6.sh
+│   │   │       ├── test7.py
+│   │   │       ├── test7.sh
+│   │   │       ├── test8.sh
+│   │   │       ├── test9.sh
+│   │   │       ├── test_bmodel_dump_1.py
+│   │   │       ├── test_bmodel_dump_2.py
+│   │   │       ├── test_bmodel_dump_3.py
+│   │   │       ├── test_cuda.sh
+│   │   │       ├── test_encrypt.py
+│   │   │       ├── test_encrypt.sh
+│   │   │       ├── test_llm0.sh
+│   │   │       ├── test_llm1.sh
+│   │   │       ├── test_MaskRCNN.sh
+│   │   │       ├── test_modelzoo.py
+│   │   │       ├── test_modelzoo.sh
+│   │   │       └── test_tdb.sh
+│   │   ├── workspace
+│   │   │   ├── 1_f16.png
+│   │   │   ├── 2_f16.png
+│   │   │   ├── dog_f16.jpg
+│   │   │   ├── final_opt.onnx
+│   │   │   ├── group_before.txt
+│   │   │   ├── rain_f16.png
+│   │   │   ├── yolov5s_1684x_f16
+│   │   │   │   ├── compilation.bmodel
+│   │   │   │   ├── final.mlir
+│   │   │   │   ├── input_ref_data.dat
+│   │   │   │   ├── .modify
+│   │   │   │   ├── output_ref_data.dat
+│   │   │   │   ├── ref_files.json
+│   │   │   │   └── tensor_location.json
+│   │   │   ├── yolov5s_1684x_f16.bmodel
+│   │   │   ├── yolov5s_1684x_f16.bmodel.compiler_profile_0.txt
+│   │   │   ├── yolov5s_1684x_f16.bmodel.json
+│   │   │   ├── yolov5s_1684x_f16.bmodel.net_0.profile
+│   │   │   ├── yolov5s_1684x_int8_sym
+│   │   │   │   ├── compilation.bmodel
+│   │   │   │   ├── final.mlir
+│   │   │   │   ├── input_ref_data.dat
+│   │   │   │   ├── .modify
+│   │   │   │   ├── output_ref_data.dat
+│   │   │   │   ├── ref_files.json
+│   │   │   │   └── tensor_location.json
+│   │   │   ├── yolov5s_1684x_int8_sym.bmodel
+│   │   │   ├── yolov5s_1684x_int8_sym.bmodel.compiler_profile_0.txt
+│   │   │   ├── yolov5s_1684x_int8_sym.bmodel.json
+│   │   │   ├── yolov5s_1684x_int8_sym.bmodel.net_0.profile
+│   │   │   ├── yolov5s_bm1684x_f16_final.mlir
+│   │   │   ├── yolov5s_bm1684x_f16.layer_group_cache.json
+│   │   │   ├── yolov5s_bm1684x_f16_tpu.mlir
+│   │   │   ├── yolov5s_bm1684x_int8.layer_group_cache.json
+│   │   │   ├── yolov5s_bm1684x_int8_sym_final.mlir
+│   │   │   ├── yolov5s_bm1684x_int8_sym_tpu.mlir
+│   │   │   ├── yolov5s_cali_table
+│   │   │   ├── yolov5s_in_f32.npz
+│   │   │   ├── yolov5s.mlir
+│   │   │   ├── yolov5s_opt.onnx.prototxt
+│   │   │   ├── yolov5s_origin.mlir
+│   │   │   ├── yolov5s.ref_files.json
+│   │   │   ├── yolov5s_shape_ops
+│   │   │   ├── yolov5s_top_f32_all_weight.npz
+│   │   │   ├── yolov5s_top_outputs.npz
+│   │   │   ├── yolov5s_tpu_addressed_bm1684x_f16_weight.npz
+│   │   │   └── yolov5s_tpu_addressed_bm1684x_int8_sym_weight.npz
+│   │   ├── yolov5s.onnx
+│   │   └── 配置环境.txt
+│   ├── ONNX转bmodel
+│   │   ├── SwinIR_1684x_f16.bmodel
+│   │   ├── SwinIR_1684x_f32.bmodel
+│   │   ├── SwinIR_1684x_int8_sym.bmodel
+│   │   ├── SwinIR_light_bm1684_int8_sym.bmodel
+│   │   ├── SwinIR_light_bm1684x_f32.bmodel
+│   │   ├── SwinIR.mlir
+│   │   └── 配置环境.txt
+│   ├── SwinIR
+│   │   ├── 0014.jpg
+│   │   ├── cog.yaml
+│   │   ├── detect_SwinIR.py
+│   │   ├── download-weights.sh
+│   │   ├── figs
+│   │   │   ├── classic_image_sr.png
+│   │   │   ├── classic_image_sr_visual.png
+│   │   │   ├── color_image_denoising.png
+│   │   │   ├── ETH_BSRGAN.png
+│   │   │   ├── ETH_LR.png
+│   │   │   ├── ETH_realESRGAN.jpg
+│   │   │   ├── ETH_SwinIR-L.png
+│   │   │   ├── ETH_SwinIR.png
+│   │   │   ├── gray_image_denoising.png
+│   │   │   ├── jepg_compress_artfact_reduction.png
+│   │   │   ├── lightweight_image_sr.png
+│   │   │   ├── OST_009_crop_BSRGAN.png
+│   │   │   ├── OST_009_crop_LR.png
+│   │   │   ├── OST_009_crop_realESRGAN.png
+│   │   │   ├── OST_009_crop_SwinIR-L.png
+│   │   │   ├── OST_009_crop_SwinIR.png
+│   │   │   ├── real_world_image_sr.png
+│   │   │   └── SwinIR_archi.png
+│   │   ├── .git
+│   │   │   ├── config
+│   │   │   ├── description
+│   │   │   ├── HEAD
+│   │   │   ├── hooks
+│   │   │   │   ├── applypatch-msg.sample
+│   │   │   │   ├── commit-msg.sample
+│   │   │   │   ├── fsmonitor-watchman.sample
+│   │   │   │   ├── post-update.sample
+│   │   │   │   ├── pre-applypatch.sample
+│   │   │   │   ├── pre-commit.sample
+│   │   │   │   ├── pre-merge-commit.sample
+│   │   │   │   ├── prepare-commit-msg.sample
+│   │   │   │   ├── pre-push.sample
+│   │   │   │   ├── pre-rebase.sample
+│   │   │   │   ├── pre-receive.sample
+│   │   │   │   ├── push-to-checkout.sample
+│   │   │   │   ├── sendemail-validate.sample
+│   │   │   │   └── update.sample
+│   │   │   ├── index
+│   │   │   ├── info
+│   │   │   │   └── exclude
+│   │   │   ├── logs
+│   │   │   │   ├── HEAD
+│   │   │   │   └── refs
+│   │   │   │       ├── heads
+│   │   │   │       │   └── main
+│   │   │   │       └── remotes
+│   │   │   │           └── origin
+│   │   │   │               └── HEAD
+│   │   │   ├── objects
+│   │   │   │   ├── info
+│   │   │   │   └── pack
+│   │   │   │       ├── pack-8cb5345fe53eb8fa954443bcf79443f61c566692.idx
+│   │   │   │       ├── pack-8cb5345fe53eb8fa954443bcf79443f61c566692.pack
+│   │   │   │       └── pack-8cb5345fe53eb8fa954443bcf79443f61c566692.rev
+│   │   │   ├── packed-refs
+│   │   │   └── refs
+│   │   │       ├── heads
+│   │   │       │   └── main
+│   │   │       ├── remotes
+│   │   │       │   └── origin
+│   │   │       │       └── HEAD
+│   │   │       └── tags
+│   │   ├── LICENSE
+│   │   ├── main_test_swinir.py
+│   │   ├── models
+│   │   │   ├── network_swinir.py
+│   │   │   └── __pycache__
+│   │   │       └── network_swinir.cpython-39.pyc
+│   │   ├── model_zoo
+│   │   │   ├── network_swinir.txt
+│   │   │   └── README.md
+│   │   ├── network_swinir(gai).py
+│   │   ├── network_swinir.py
+│   │   ├── predict.py
+│   │   ├── print.py
+│   │   ├── README.md
+│   │   ├── testsets
+│   │   │   ├── classic5
+│   │   │   │   ├── baboon.bmp
+│   │   │   │   ├── barbara.bmp
+│   │   │   │   ├── boats.bmp
+│   │   │   │   ├── lena.bmp
+│   │   │   │   └── peppers.bmp
+│   │   │   ├── McMaster
+│   │   │   │   ├── 10.tif
+│   │   │   │   ├── 11.tif
+│   │   │   │   ├── 12.tif
+│   │   │   │   ├── 13.tif
+│   │   │   │   ├── 14.tif
+│   │   │   │   ├── 15.tif
+│   │   │   │   ├── 16.tif
+│   │   │   │   ├── 17.tif
+│   │   │   │   ├── 18.tif
+│   │   │   │   ├── 1.tif
+│   │   │   │   ├── 2.tif
+│   │   │   │   ├── 3.tif
+│   │   │   │   ├── 4.tif
+│   │   │   │   ├── 5.tif
+│   │   │   │   ├── 6.tif
+│   │   │   │   ├── 7.tif
+│   │   │   │   ├── 8.tif
+│   │   │   │   └── 9.tif
+│   │   │   ├── RealSRSet+5images
+│   │   │   │   ├── 00003.png
+│   │   │   │   ├── 0014.jpg
+│   │   │   │   ├── 0030.jpg
+│   │   │   │   ├── ADE_val_00000114.jpg
+│   │   │   │   ├── building.png
+│   │   │   │   ├── butterfly2.png
+│   │   │   │   ├── butterfly.png
+│   │   │   │   ├── chip.png
+│   │   │   │   ├── comic1.png
+│   │   │   │   ├── comic2.png
+│   │   │   │   ├── comic3.png
+│   │   │   │   ├── computer.png
+│   │   │   │   ├── dog.png
+│   │   │   │   ├── dped_crop00061.png
+│   │   │   │   ├── foreman.png
+│   │   │   │   ├── frog.png
+│   │   │   │   ├── Lincoln.png
+│   │   │   │   ├── oldphoto2.png
+│   │   │   │   ├── oldphoto3.png
+│   │   │   │   ├── oldphoto6.png
+│   │   │   │   ├── OST_009.png
+│   │   │   │   ├── painting.png
+│   │   │   │   ├── pattern.png
+│   │   │   │   ├── ppt3.png
+│   │   │   │   └── tiger.png
+│   │   │   ├── Set12
+│   │   │   │   ├── 01.png
+│   │   │   │   ├── 02.png
+│   │   │   │   ├── 03.png
+│   │   │   │   ├── 04.png
+│   │   │   │   ├── 05.png
+│   │   │   │   ├── 06.png
+│   │   │   │   ├── 07.png
+│   │   │   │   ├── 08.png
+│   │   │   │   ├── 09.png
+│   │   │   │   ├── 10.png
+│   │   │   │   ├── 11.png
+│   │   │   │   └── 12.png
+│   │   │   └── Set5
+│   │   │       ├── HR
+│   │   │       │   ├── baby.png
+│   │   │       │   ├── bird.png
+│   │   │       │   ├── butterfly.png
+│   │   │       │   ├── head.png
+│   │   │       │   └── woman.png
+│   │   │       └── LR_bicubic
+│   │   │           ├── X2
+│   │   │           │   ├── babyx2.png
+│   │   │           │   ├── birdx2.png
+│   │   │           │   ├── butterflyx2.png
+│   │   │           │   ├── headx2.png
+│   │   │           │   └── womanx2.png
+│   │   │           ├── X3
+│   │   │           │   ├── babyx3.png
+│   │   │           │   ├── birdx3.png
+│   │   │           │   ├── butterflyx3.png
+│   │   │           │   ├── headx3.png
+│   │   │           │   └── womanx3.png
+│   │   │           ├── X4
+│   │   │           │   ├── babyx4.png
+│   │   │           │   ├── birdx4.png
+│   │   │           │   ├── butterflyx4.png
+│   │   │           │   ├── headx4.png
+│   │   │           │   └── womanx4.png
+│   │   │           └── X8
+│   │   │               ├── babyx8.png
+│   │   │               ├── birdx8.png
+│   │   │               ├── butterflyx8.png
+│   │   │               ├── headx8.png
+│   │   │               └── womanx8.png
+│   │   ├── torch_load_model.py
+│   │   ├── utils
+│   │   │   ├── __pycache__
+│   │   │   │   └── util_calculate_psnr_ssim.cpython-39.pyc
+│   │   │   └── util_calculate_psnr_ssim.py
+│   │   └── verify.py
+│   ├── 导出ONNX模型
+│   │   ├── 001_classicalSR_DIV2K_s48w8_SwinIR-M_x4.pth
+│   │   ├── import_onnx1.py
+│   │   ├── model_comparison.py
+│   │   ├── SwinIR_light_x4.onnx
+│   │   └── 配置环境.txt
+│   └── 部署程序和web界面设计
+│       ├── app.py
+│       ├── config.py
+│       ├── inference.py
+│       ├── main.py
+│       ├── pipeline.py
+│       ├── __pycache__
+│       │   ├── config.cpython-38.pyc
+│       │   ├── inference.cpython-38.pyc
+│       │   ├── pipeline.cpython-38.pyc
+│       │   └── utils.cpython-38.pyc
+│       ├── results
+│       │   ├── 0030_swinir.jpg
+│       │   ├── ADE_val_00000114_swinir.jpg
+│       │   ├── butterfly_swinir.png
+│       │   ├── frog_swinir.png
+│       │   └── rain192192_swinir.png
+│       ├── templates
+│       │   └── index.html
+│       ├── uploads
+│       ├── utils.py
+│       └── 配置环境.txt
+└── file_list.txt
+
+72 directories, 1456 files

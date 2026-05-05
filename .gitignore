@@ -1,0 +1,49 @@
+# --- 1. 屏蔽视频与文档大文件 (重点) ---
+2_docs/演示视频/
+*.mov
+*.mp4
+*.wmv
+.DS_Store
+._*
+
+# --- 2. 屏蔽所有模型、权重与编译产物 (体积重灾区) ---
+# 无论在哪个路径下，只要是这些后缀的全部屏蔽
+*.bmodel
+#*.onnx
+*.pth
+*.tflite
+*.caffemodel
+*.prototxt
+*.mlir
+*.dat
+*.npz
+*.sim
+3_models/
+**/ONNX转bmodel/
+
+# --- 3. 屏蔽数据集与测试集 ---
+#**/COCO2017/
+#**/LFW/
+#**/MNIST/
+#**/testsets/
+#**/test_input*/
+#**/npz_input/
+#**/dataset/
+#**/mixed_precision_workdir/
+
+# --- 4. 屏蔽运行结果、日志与临时文件 ---
+#**/results/
+**/uploads/
+**/workspace/
+**/profile/
+*.log
+*.swp
+
+# --- 5. 屏蔽 Python 缓存与 IDE 配置 ---
+__pycache__/
+**/*.pyc
+**/*(副本)*
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.gitattributes

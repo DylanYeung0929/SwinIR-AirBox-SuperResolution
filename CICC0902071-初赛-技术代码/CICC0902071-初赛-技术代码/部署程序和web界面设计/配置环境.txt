@@ -1,0 +1,4 @@
+ii  sophon-mw-soc-sophon-ffmpeg            0.10.0                            arm64        Sophon multimedia library
+ii  sophon-mw-soc-sophon-opencv            0.10.0                            arm64        Sophon multimedia library
+ii  sophon-soc-libsophon                   0.5.1                             arm64        libsophon built using CMake
+ii  sophon-soc-libsophon-dev               0.5.1                             arm64        libsophon built using CMake
