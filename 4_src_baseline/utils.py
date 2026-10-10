@@ -24,7 +24,7 @@ def preprocess(img_bm, bmcv, input_range='0_1', model_input_shape=None):
         bmcv.convert_format(resized_bm, rgb_bm)
         
         # 3. 硬件量化与数据类型转换 (VPP: uint8 -> float32 且归一化)
-        # 这是核心创新点：将原本由 CPU Numpy 承担的除以 255 运算，转化为硬件层的乘加运算
+        # 将原本由 CPU Numpy 承担的除以 255 运算，转化为硬件层的乘加运算
         rgb_f32_bm = sail.BMImage(bmcv.get_handle(), target_h, target_w,
                                   sail.Format.FORMAT_RGB_PLANAR, sail.ImgDtype.DATA_TYPE_EXT_FLOAT32)
         
@@ -61,7 +61,7 @@ def postprocess(output_np, bmcv, input_range='0_1', model_output_shape=None):
         if len(output_np.shape) == 4:
             output_np = output_np[0] 
             
-        # 性能压榨：In-place 原地计算，极限降低内存分配开销与垃圾回收压力
+        #In-place 原地计算，降低内存分配开销与垃圾回收压力
         if input_range == '0_1':
             output_np *= 255.0
         else:
@@ -97,7 +97,7 @@ def calculate_psnr(sr_img, gt_img):
         if sr_img.shape != gt_img.shape:
             gt_img = cv2.resize(gt_img, (sr_img.shape[1], sr_img.shape[0]))
             
-        # 转换为YCrCb并提取Y通道用于竞赛标准打分
+        # 转换为YCrCb并提取Y通道用于打分
         sr_y = cv2.cvtColor(sr_img, cv2.COLOR_BGR2YCrCb)[:, :, 0]
         gt_y = cv2.cvtColor(gt_img, cv2.COLOR_BGR2YCrCb)[:, :, 0]
         

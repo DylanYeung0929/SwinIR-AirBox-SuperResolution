@@ -11,18 +11,15 @@ from inference import SwinIRInference
 
 save_lock = threading.Lock()
 
-# ==========================================
-# 创新点一：自适应多头 YOLOv5 ROI 提取器 (BM1684X 专用)
-# ==========================================
 class YOLOv5_ROI:
     def __init__(self, bmodel_path, device_id):
         self.engine = None
         if not os.path.exists(bmodel_path):
-            print(f"⚠️ YOLO 模块未激活: 找不到模型 {bmodel_path}")
+            print(f"YOLO 模块未激活: 找不到模型 {bmodel_path}")
             return
             
         try:
-            print(f"✅ 挂载 YOLOv5 级联引擎: {bmodel_path}")
+            print(f"挂载 YOLOv5 级联引擎: {bmodel_path}")
             self.handle = sail.Handle(device_id)
             self.engine = sail.Engine(bmodel_path, device_id, sail.IOMode.SYSIO)
             self.graph_name = self.engine.get_graph_names()[0]
@@ -74,8 +71,6 @@ class YOLOv5_ROI:
                     out = out.reshape((1, 3, 85, h_feat, w_feat)).transpose((0, 1, 3, 4, 2))
                 
                 # 获取 Objectness Score (通常在最后一维的索引 4)
-                # 针对你的模型报错 (dim=80)，说明该模型可能直接输出了 class probs 或已剥离 objectness
-                # 我们采用动态探测：如果维度是 85，取 index 4；如果是 80，取所有类别的最大值
                 last_dim = out.shape[-1]
                 if last_dim >= 5:
                     obj_conf = self.sigmoid(out[0, ..., 4])
@@ -109,7 +104,7 @@ class YOLOv5_ROI:
                         
         except Exception as e:
             # 记录错误但不中断主流程
-            # print(f"⚠️ YOLO 解析细节警告: {e}")
+            # print(f"YOLO 解析细节警告: {e}")
             pass
             
         return mask
@@ -241,7 +236,7 @@ class Pipeline:
                         out_canvas[y_s:y_s+tile_size*scale, x_s:x_s+tile_size*scale, :] += result_tile.astype(np.float32) * window_3d
                         weight_canvas[y_s:y_s+tile_size*scale, x_s:x_s+tile_size*scale, :] += window_3d
             
-            print(f"[{os.path.basename(img_path)}] 路由统计: YOLO命中(TPU) {stats['yolo']} | 纹理命中(TPU) {stats['entropy']} | 平滑背景(极速) {stats['cpu']}")
+            print(f"[{os.path.basename(img_path)}] 路由统计: YOLO命中(TPU) {stats['yolo']} | 纹理命中(TPU) {stats['entropy']} | 平滑背景{stats['cpu']}")
             
             # 最终融合输出
             final_img = out_canvas / (weight_canvas + 1e-7)
