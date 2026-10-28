@@ -78,7 +78,7 @@ class YOLOv5_ROI:
                     obj_conf = self.sigmoid(np.max(out[0, ..., :], axis=-1))
                 
                 # 找到所有高于阈值的特征格点
-                y_idxs, x_idxs, anchor_idxs = np.where(obj_conf > conf_threshold)
+                anchor_idxs, y_idxs, x_idxs = np.where(obj_conf > conf_threshold)
                 
                 if len(y_idxs) > 0:
                     h_feat, w_feat = obj_conf.shape[1], obj_conf.shape[2]
