@@ -8,7 +8,7 @@ def get_args():
     parser.add_argument('--save_dir', type=str, default='./results', help="结果保存目录")
     parser.add_argument('--scale', type=int, required=True, help="超分倍数")
     parser.add_argument('--window_size', type=int, required=True, help="模型滑窗大小")
-    parser.add_argument('--tile', type=int, default=None, help="分块推理大小")
+    parser.add_argument('--tile', type=int, default=192, help="分块推理大小")
     parser.add_argument('--tile_overlap', type=int, default=64, help="分块重叠大小")
     parser.add_argument('--input_range', choices=['0_1','-1_1'], default='0_1', help="输入归一化范围")
     parser.add_argument('--tta', action='store_true', help="启用TTA")
